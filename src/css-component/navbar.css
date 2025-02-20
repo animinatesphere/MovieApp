@@ -187,7 +187,8 @@ a {
 /* Responsive Navbar */
 @media screen and (max-width: 480px) {
   .hamburger {
-    display: block; /* Show on mobile */
+    display: block;
+    position: fixed;
   }
 
   .nav-logo-child {

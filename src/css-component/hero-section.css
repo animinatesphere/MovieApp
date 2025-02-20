@@ -501,7 +501,7 @@
     width: fit-content;
   }
   .hero-overlay {
-    margin-left: -3rem;
+    margin-left: -1rem;
     width: fit-content;
     /* padding-top: 150rem; */
   }
@@ -517,6 +517,88 @@
     color: #ffffff;
     width: 300px;
     margin-left: 2rem;
+  }
+  .hero-overlay button {
+    /* display: none; */
+    width: 280px;
+    height: 40px;
+    border-radius: 4px;
+    padding-top: 8px;
+    padding-right: 24px;
+    padding-bottom: 8px;
+    padding-left: 10px;
+    gap: 20px;
+    background: #df2144;
+    font-family: Vazirmatn;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 25px;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #ffffff;
+    border: none;
+    margin-left: 2rem;
+  }
+}
+@media (max-width: 362px) {
+  .movie-card {
+    max-width: 350px;
+  }
+  .play-he {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    margin: 0 auto;
+    gap: 20rem;
+  }
+  .play-he img {
+    display: none;
+  }
+  .frame-65 {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    margin: 0 auto;
+    /* position: absolute; */
+    margin-top: -0.7rem;
+    width: 350px;
+    height: 28px;
+    justify-content: space-between;
+    border-radius: 8px;
+    padding-top: 4px;
+    padding-right: 24px;
+    padding-bottom: 4px;
+    padding-left: 24px;
+    background: #2f2f2f;
+  }
+  .movies-carousel {
+    width: fit-content;
+  }
+  .current-title {
+    font-family: Vazirmatn;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 62.5px;
+    letter-spacing: 0%;
+    width: fit-content;
+  }
+  .hero-overlay {
+    margin-left: 4rem;
+    width: fit-content;
+    /* padding-top: 150rem; */
+  }
+  .over {
+    font-family: Vazirmatn;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18.75px;
+    letter-spacing: 0%;
+    text-align: justify;
+    /* width: 10px;
+    height: 95px; */
+    color: #ffffff;
+    width: 300px;
+    margin-left: 5rem;
   }
   .hero-overlay button {
     /* display: none; */
