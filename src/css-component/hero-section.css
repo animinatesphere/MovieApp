@@ -582,22 +582,22 @@
     width: fit-content;
   }
   .hero-overlay {
-    margin-left: -6rem;
+    margin-left: 20rem;
     width: fit-content;
     /* padding-top: 150rem; */
   }
   .over {
     font-family: Vazirmatn;
     font-weight: 600;
-    font-size: 10px;
+    font-size: 2px;
     line-height: 18.75px;
     letter-spacing: 0%;
     text-align: justify;
     /* width: 10px;
     height: 95px; */
     color: #ffffff;
-    width: 280px;
-    margin-left: 2rem;
+    width: 200px;
+    margin-left: 6rem;
   }
   .hero-overlay button {
     /* display: none; */
