@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "../css-component/now-playing.css";
 import NavBar from "./NavBar";
+import RealFooter from "./RealFooter";
 
 const Api_Key = import.meta.env.VITE_App_Base_Api_key;
 const Api_Url = import.meta.env.VITE_App_Base_Url;
@@ -53,6 +54,7 @@ const NowPlayingPage = () => {
           ))}
         </div>
       </div>
+      <RealFooter />
     </>
   );
 };

@@ -215,6 +215,95 @@
 .comment {
   margin-top: 0;
 }
+/* movie re */
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .movies-grid2 {
+    grid-template-columns: repeat(4, 1fr); /* Adjust for tablets */
+    gap: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .movies-grid2 {
+    grid-template-columns: repeat(3, 1fr); /* Adjust for medium-sized screens */
+    gap: 25px;
+  }
+
+  .now-playing {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .now-title {
+    font-size: 14px;
+    margin-top: -2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .movies-grid2 {
+    grid-template-columns: repeat(2, 1fr); /* Adjust for small mobile screens */
+    gap: 15px;
+  }
+
+  .now-playing {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .now-title {
+    font-size: 12px;
+  }
+
+  .now-playing-page {
+    margin-top: 8rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .movies-grid2 {
+    grid-template-columns: repeat(
+      1,
+      1fr
+    ); /* Single column for very small screens */
+    gap: 10px;
+  }
+
+  .now-playing {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .now-title {
+    font-size: 12px;
+  }
+
+  .now-playing-page {
+    margin-top: 5rem;
+  }
+
+  .now-title {
+    font-family: Vazirmatn;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 27px;
+    margin-top: -4rem;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  .now-playing-containe {
+    background: #030a1b;
+    height: auto;
+    padding-bottom: 2rem;
+  }
+
+  .comment {
+    margin-top: 1rem;
+  }
+}
+/*end  movie re */
 
 @media screen and (max-width: 1116px) {
   .movie-card {
