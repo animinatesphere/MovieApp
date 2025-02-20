@@ -332,10 +332,11 @@
   .current-title {
     font-family: Vazirmatn;
     font-weight: 800;
-    font-size: 30px;
+    font-size: 26px;
     line-height: 62.5px;
     letter-spacing: 0%;
     width: fit-content;
+    margin-left: 3rem;
   }
   .hero-overlay {
     margin-left: -3rem;
