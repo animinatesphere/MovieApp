@@ -1,0 +1,118 @@
+.footer {
+  background: hsl(0, 2%, 18%);
+  margin-top: 7rem;
+}
+.footer-container {
+  display: flex;
+  align-items: center;
+  gap: 21rem;
+}
+.footer-section {
+  display: flex;
+  align-items: center;
+  margin-left: 3rem;
+  gap: 3rem;
+}
+ul {
+  list-style: none;
+}
+.last {
+  display: flex;
+  align-items: center;
+  gap: 18rem;
+  margin-top: 2rem;
+}
+
+.first-row h3 {
+  font-family: Vazirmatn;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0%;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-style: solid;
+  color: #ffffff;
+  text-decoration-thickness: Auto;
+}
+.first-row2 h3 {
+  font-family: Vazirmatn;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0%;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-style: solid;
+  color: #ffffff;
+  text-decoration-thickness: Auto;
+}
+.first-row2 li {
+  font-family: Vazirmatn;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: -0.5%;
+  text-align: center;
+  color: #ffffff;
+}
+.first-row p {
+  font-family: Vazirmatn;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0%;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-style: solid;
+  color: #ffffff;
+  text-decoration-thickness: Auto;
+}
+.footer-logo button {
+  width: 712px;
+  height: 107px;
+  gap: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom-left-radius: 71px;
+  font-family: Vazirmatn;
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 43.75px;
+  letter-spacing: 1%;
+  text-align: center;
+  background: #df2144;
+  color: white;
+  border: none;
+}
+.logo {
+  color: #1eb7e8;
+  margin-left: 1rem;
+}
+.footer-description {
+  font-family: Vazirmatn;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0%;
+  text-align: justify;
+  color: #ffffff;
+  width: 617px;
+  height: 100px;
+  opacity: 0.9px;
+  margin-top: 2rem;
+}
+.support-phone {
+  font-family: Vazirmatn;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: -1%;
+  text-align: center;
+  color: #ffffff;
+}
+
+.half {
+  width: 356px;
+  height: 55px;
+}

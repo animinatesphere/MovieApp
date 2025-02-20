@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+.nav-bar-container {
+  position: absolute;
+  top: 0;
+  left: 8rem;
+  z-index: 1000;
+  width: fit-content;
+}
+
+.nav-logo-child {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: fit-content;
+  border: 0.5px solid;
+  border: linear-gradient(
+    89.97deg,
+    #228ee5 0.83%,
+    rgba(34, 142, 229, 0.18) 28.39%,
+    rgba(34, 142, 229, 0.14) 73.52%,
+    #228ee5 98.92%
+  );
+  background: #1a19194d;
+  backdrop-filter: blur(8px);
+  gap: 15rem;
+  border-radius: 10px;
+  margin-top: 2rem;
+  padding: 10px 20px;
+}
+
+.nav-bar-logo img {
+  width: 94px;
+  height: 94px;
+}
+
+.Nav-link ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+a {
+  text-decoration: none;
+  font-family: "Lato", serif;
+  font-weight: 500;
+  font-size: 24px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* ✅ Responsive Design */
+
+/* 🔹 For Tablets and Small Laptops */
+@media screen and (max-width: 1116px) {
+  .nav-bar-container {
+    left: 10rem;
+  }
+
+  .nav-logo-child {
+    gap: 5rem;
+    padding: 10px;
+  }
+
+  .Nav-link ul {
+    gap: 1.5rem;
+  }
+
+  a {
+    font-size: 20px;
+  }
+
+  .nav-bar-logo img {
+    width: 80px;
+    height: 80px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .nav-bar-container {
+    left: 4rem;
+  }
+
+  .nav-logo-child {
+    gap: 5rem;
+    padding: 10px;
+  }
+
+  .Nav-link ul {
+    gap: 1.5rem;
+  }
+
+  a {
+    font-size: 20px;
+  }
+
+  .nav-bar-logo img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* 🔹 For Mobile Screens */
+@media screen and (max-width: 768px) {
+  .nav-bar-container {
+    left: 0;
+    width: 100%;
+  }
+
+  .nav-logo-child {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 10px;
+  }
+
+  .Nav-link ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav-left {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .nav-bar-logo img {
+    width: 70px;
+    height: 70px;
+  }
+
+  a {
+    font-size: 18px;
+  }
+}
+
+/* 🔹 For Extra Small Screens */
+@media screen and (max-width: 480px) {
+  .nav-logo-child {
+    padding: 5px;
+  }
+
+  .nav-bar-logo img {
+    width: 60px;
+    height: 60px;
+  }
+
+  a {
+    font-size: 16px;
+  }
+}

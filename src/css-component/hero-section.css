@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.hero-container {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  /* margin-top: 10px; */
+  transition: background-image 1s ease-in-out;
+}
+
+.hero-overlay {
+  position: absolute;
+  bottom: 200px;
+  left: 50px;
+  color: white;
+  /* background: rgba(0, 0, 0, 0.6); */
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+}
+
+.current-title {
+  font-family: Vazirmatn;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 62.5px;
+  letter-spacing: 0%;
+}
+.current.over {
+  font-family: Vazirmatn;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18.75px;
+  letter-spacing: 0%;
+  text-align: justify;
+  width: 10px;
+  height: 95px;
+  color: #ffffff;
+}
+.hero-overlay button {
+  width: 342px;
+  height: 40px;
+  border-radius: 4px;
+  padding-top: 8px;
+  padding-right: 24px;
+  padding-bottom: 8px;
+  padding-left: 24px;
+  gap: 20px;
+  background: #df2144;
+  font-family: Vazirmatn;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0%;
+  text-align: right;
+  color: #ffffff;
+  border: none;
+}
