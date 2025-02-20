@@ -30,36 +30,36 @@ const RealFooter = () => {
             </ul>
           </div>
           <div className="first-row2">
-            <h3>دانلود</h3>
+            <h3>Download</h3>
             <ul>
-              <li>فیلم</li>
-              <li>سریال</li>
-              <li>انیمیشن</li>
-              <li>جستجو</li>
-              <li>دسته بندی</li>
-              <li>دسته بندی</li>
+              <li>Movie</li>
+              <li>Series</li>
+              <li>Animation</li>
+              <li>Search</li>
+              <li>Category</li>
+              <li>Category</li>
             </ul>
           </div>
           <div className="first-row2">
-            <h3>دانلود</h3>
+            <h3>Download</h3>
             <ul>
-              <li>فیلم</li>
-              <li>سریال</li>
-              <li>انیمیشن</li>
-              <li>جستجو</li>
-              <li>دسته بندی</li>
-              <li>دسته بندی</li>
+              <li>Film</li>
+              <li>Series</li>
+              <li>Animation</li>
+              <li>Search</li>
+              <li>Category</li>
+              <li>Category</li>
             </ul>
           </div>
           <div className="first-row2">
-            <h3>دانلود</h3>
+            <h3>Download</h3>
             <ul>
-              <li>فیلم</li>
-              <li>سریال</li>
-              <li>انیمیشن</li>
-              <li>جستجو</li>
-              <li>دسته بندی</li>
-              <li>دسته بندی</li>
+              <li>Movie</li>
+              <li>Series</li>
+              <li>Animation</li>
+              <li>Search</li>
+              <li>Category</li>
+              <li>Category</li>
             </ul>
           </div>
         </div>
@@ -68,22 +68,25 @@ const RealFooter = () => {
         <div className="footer-bottom">
           <div className="footer-logo">
             <button>
-              <span className="logo-text">سینما سیتی، رسانه‌ای برای همه</span>
+              <span className="logo-text">
+                Cinema City, a media for everyone
+              </span>
+
               <span className="logo">logo</span>
             </button>
           </div>
 
           <p className="footer-description">
-            وبسایت +++++ فعالیت خود را از سال 1396 شروع کرده است و به صورت
-            حرفه‌ای به دانلود فیلم و سریال بدون سانسور پرداخته است. در این
-            وبسایت شما میتوانید هر فیلم یا سرییا یا انیمیشن مورد علاقه ی خود را
-            به صورت آنلاین مشاهده و دانلود کنید. همچنین زیرنویس ها و دوبله هایی
-            اختصاصی ای برای تمام فیلم و سریال ها تعیین شده است.
+            The +++++ website started its activity in 2017 and has been
+            professionally providing uncensored movie and series downloads. On
+            this website, you can watch and download any movie, series, or
+            animation of your choice online. Additionally, exclusive subtitles
+            and dubbing have been provided for all movies and series.
           </p>
 
           {/* Social Media Icons */}
           <div className="last">
-            <div className="support-phone">تلفن پشتیبانی: 15*****0912</div>
+            <div className="support-phone">Support Phone: 15*****0912</div>
             <div className="social-icons">
               <img src={frame30} alt="" />
             </div>

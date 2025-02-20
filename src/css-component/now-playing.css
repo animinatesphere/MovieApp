@@ -303,6 +303,48 @@
     margin-top: 1rem;
   }
 }
+@media screen and (max-width: 353px) {
+  .movies-grid2 {
+    grid-template-columns: repeat(
+      1,
+      1fr
+    ); /* Single column for very small screens */
+    gap: 10px;
+  }
+
+  .now-playing {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .now-title {
+    font-size: 12px;
+  }
+
+  .now-playing-page {
+    margin-top: 5rem;
+  }
+
+  .now-title {
+    font-family: Vazirmatn;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 27px;
+    margin-top: -4rem;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  .now-playing-containe {
+    background: #030a1b;
+    height: auto;
+    padding-bottom: 2rem;
+  }
+
+  .comment {
+    margin-top: 1rem;
+  }
+}
 /*end  movie re */
 
 @media screen and (max-width: 1116px) {
