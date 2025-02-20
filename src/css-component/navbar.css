@@ -142,6 +142,9 @@ a {
 
 /* 🔹 For Extra Small Screens */
 @media screen and (max-width: 480px) {
+  .nav-bar-container {
+    width: fit-content;
+  }
   .nav-logo-child {
     padding: 5px;
   }
