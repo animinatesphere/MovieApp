@@ -651,9 +651,13 @@
     padding-left: 24px;
     background: #2f2f2f;
   }
+  .now-playing-contai {
+    padding-top: 48rem;
+    width: fit-content;
+    height: 100%;
+  }
   .movies-carousel {
     margin-left: 0.4rem;
-    width: fit-content;
   }
   .detaails-ti {
     font-family: Lato;
@@ -755,12 +759,12 @@
     color: #ebfaff;
   }
   .cards img {
-    width: 350px;
+    width: 300px;
     height: 250px;
     object-fit: contain;
   }
   .view2 {
-    margin-left: 10rem;
+    margin-left: 6rem;
     margin-top: 2rem;
   }
   .comment {
@@ -768,9 +772,11 @@
     padding-top: 10vw;
     margin-left: -2rem;
   }
-  .movie-banner {
-    height: 1000px;
+  .movie-details-container {
+    background: #030a1b;
+    height: 100vh;
   }
+
   .gen-bu {
     display: flex;
     gap: 1rem;
@@ -801,13 +807,7 @@
     padding-top: 5rem;
     width: fit-content;
   }
-  .social-media {
-    display: flex;
-    width: fit-content;
-    margin: 0 auto;
-    gap: 56px;
-    margin-top: 2rem;
-  }
+
   .footer-details {
     display: flex;
     flex-direction: column;
@@ -819,7 +819,36 @@
     height: 100%;
   }
   .movie-info {
-    margin-top: 40px;
+    margin-top: -15rem;
+  }
+  .banner-de {
+    padding-top: 10rem;
+    margin-left: -4rem;
+  }
+  .vote {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    margin: 0 auto;
+  }
+  .vote span {
+    width: 16px;
+    height: 16px;
+  }
+  .like {
+    margin-left: 8rem;
+    margin-top: 1rem;
+    width: 248px;
+    height: 30px;
+    object-fit: contain;
+    margin-top: 4rem;
+  }
+  .social-media {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+  }
+  .movie-banner {
+    height: 900px;
   }
 }
 @media (max-width: 353px) {
@@ -859,6 +888,7 @@
   .movies-carousel {
     /* margin-left: -2rem; */
     width: fit-content;
+    /* margin-top: 20rem; */
   }
   .detaails-ti {
     font-family: Lato;
@@ -938,8 +968,8 @@
     font-size: 17px;
     line-height: 28.8px;
     letter-spacing: 0%;
-    width: 350px;
-    margin-left: 30px;
+    width: 300px;
+    margin-left: 10px;
     color: #ffffff;
   }
   .comment-head p {
@@ -959,19 +989,26 @@
     letter-spacing: 0%;
     color: #ebfaff;
   }
+  .cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    gap: 1rem;
+    /* padding-top: 2rem; */
+  }
+
   .cards img {
-    width: 350px;
+    width: 300px;
     height: 250px;
     object-fit: contain;
   }
-  .view2 {
-    margin-left: 10rem;
-    margin-top: 2rem;
-  }
+
   .comment {
     background: #030a1b;
-    padding-top: 10vw;
+    padding-top: 7vw;
     margin-left: -2rem;
+    height: 100%;
   }
   .movie-banner {
     height: 1000px;
@@ -1033,7 +1070,8 @@
     gap: 0.5rem;
   }
   .view2 {
-    margin-left: 12rem;
+    margin-left: 9rem;
+    margin-top: 3rem;
   }
   .social-media {
     display: flex;
