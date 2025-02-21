@@ -4,7 +4,10 @@
   margin: 0;
   box-sizing: border-box;
 }
-
+.movie-container {
+  background: #030a1b;
+  height: 100vh;
+}
 .movie-details-container {
   background: #030a1b;
   height: 100%;
