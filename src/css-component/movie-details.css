@@ -649,7 +649,7 @@
     background: #2f2f2f;
   }
   .movies-carousel {
-    /* margin-left: -2rem; */
+    margin-left: 0.4rem;
     width: fit-content;
   }
   .detaails-ti {
