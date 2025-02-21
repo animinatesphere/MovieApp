@@ -457,7 +457,7 @@
     background: #2f2f2f;
   }
   .movies-carousel {
-    margin-left: -2rem;
+    margin-left: 1.2rem;
     width: fit-content;
   }
   .detaails-ti {
@@ -612,6 +612,9 @@
     margin: 0 auto;
     gap: 56px;
     margin-top: 2rem;
+  }
+  .movie-info {
+    margin-top: 20px;
   }
 }
 @media (max-width: 391px) {
@@ -814,6 +817,9 @@
     background: #030a1b;
     padding-top: 10rem;
     height: 100%;
+  }
+  .movie-info {
+    margin-top: 40px;
   }
 }
 @media (max-width: 353px) {
