@@ -409,4 +409,105 @@
   .comment-head p {
     font-size: 18px;
   }
+  .footer-row-1 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .view2 {
+    margin-left: 13rem;
+  }
+  .vote span {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .footer-logo button {
+    font-size: 20px;
+    padding: 8px;
+  }
+
+  .footer-description {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .support-phone {
+    font-size: 12px;
+  }
+
+  .last {
+    gap: 0.5rem;
+  }
+  .view2 {
+    margin-left: 12rem;
+  }
+  .social-media {
+    display: flex;
+    width: fit-content;
+    margin: 0 auto;
+    gap: 30px;
+    /* margin-top: 10rem; */
+  }
+  .social-media img {
+    width: 16px;
+    height: 16px;
+  }
+  .gen-bu {
+    display: flex;
+    gap: 0.7rem;
+    margin-top: 2rem;
+  }
+  .gen-bu button {
+    width: 93;
+    height: 41;
+
+    border: none;
+    border-radius: 25px;
+    gap: 10px;
+    padding-top: 12px;
+    padding-right: 28px;
+    padding-bottom: 12px;
+    padding-left: 28px;
+    background: #ec5baa;
+    font-family: Lato;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 16.8px;
+    letter-spacing: 0%;
+  }
+  .details p {
+    font-size: 14px;
+    max-width: 100%;
+  }
+  .banner-de {
+    margin-left: -2rem;
+  }
+  .vote {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .vote span {
+    width: 16px;
+    height: 16px;
+  }
+  .like {
+    margin-top: 3rem;
+  }
+  .play-sect {
+    gap: 1rem;
+  }
+  .pro h1 {
+    margin-left: 48px;
+    font-family: Lato;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 57.6px;
+    letter-spacing: 0%;
+    color: #ebfaff;
+    margin-top: 5rem;
+  }
 }

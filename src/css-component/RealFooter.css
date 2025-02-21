@@ -336,23 +336,3 @@ ul {
     height: auto;
   }
 }
-
-@media screen and (max-width: 350px) {
-  .footer-logo button {
-    font-size: 20px;
-    padding: 8px;
-  }
-
-  .footer-description {
-    font-size: 12px;
-    line-height: 20px;
-  }
-
-  .support-phone {
-    font-size: 12px;
-  }
-
-  .last {
-    gap: 0.5rem;
-  }
-}
