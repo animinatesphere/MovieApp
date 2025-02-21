@@ -6,11 +6,8 @@
 }
 .movie-container {
   background: #030a1b;
+  width: 100%;
   height: 100vh;
-}
-.movie-details-container {
-  background: #030a1b;
-  height: 100%;
 }
 
 /* Movie Details Page */

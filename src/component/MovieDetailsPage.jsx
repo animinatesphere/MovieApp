@@ -43,8 +43,8 @@ const MovieDetailsPage = () => {
 
   return (
     <>
-      <NavBar />
       <div className="movie-container">
+        <NavBar />
         <div className="movie-details-container">
           <div
             className="movie-banner"
@@ -120,8 +120,8 @@ const MovieDetailsPage = () => {
             <img src={card4} alt="" />
           </div>
         </div>
+        <FooterDetails />
       </div>
-      <FooterDetails />
     </>
   );
 };
