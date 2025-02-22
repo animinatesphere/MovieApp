@@ -631,4 +631,8 @@
     line-height: 20.8px;
     letter-spacing: 0%;
   }
+  .gen-bu {
+    gap: 0.5rem;
+    padding-left: 2rem;
+  }
 }
