@@ -1,3 +1,9 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
 /* Now Playing Section */
 .now-playing-container {
   text-align: center;
@@ -737,11 +743,18 @@
     line-height: 62.5px;
     letter-spacing: 0%;
     width: fit-content;
+    margin: 0 auto;
+  }
+  .hero-container {
+    height: 500px;
   }
   .hero-overlay {
-    margin-left: -2rem;
+    margin-left: -4rem;
     width: fit-content;
+    /* margin: 0 auto; */
+
     /* padding-top: 150rem; */
+    overflow-x: hidden;
   }
   .over {
     font-family: Vazirmatn;
@@ -749,15 +762,16 @@
     font-size: 10px;
     line-height: 18.75px;
     letter-spacing: 0%;
-    text-align: justify;
+    text-align: center;
     /* width: 10px;
     height: 95px; */
     color: #ffffff;
-    width: 200px;
-    /* margin-left: 2rem; */
+    width: 300px;
+    /* margin: 0 auto; */
+    margin-left: 1rem;
   }
   .hero-overlay button {
-    /* display: none; */
+    display: none;
     width: 280px;
     height: 40px;
     border-radius: 4px;
@@ -778,7 +792,7 @@
     margin-left: 2rem;
   }
   .hero-overlay img {
-    margin-left: -3rem;
+    margin-left: 1rem;
     width: fit-content;
   }
   .pro h1 {
