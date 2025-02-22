@@ -625,6 +625,69 @@
     width: fit-content;
   }
 }
+
+@media (max-width: 419px) {
+  .movie-card {
+    max-width: 300px;
+  }
+  .play-he {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    margin: 0 auto;
+    gap: 20rem;
+  }
+  .play-he img {
+    display: none;
+  }
+  .hero-overlay {
+    margin-left: -5rem;
+  }
+  .frame-65 {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    margin: 0 auto;
+    /* position: absolute; */
+    margin-top: -0.7rem;
+    width: 300px;
+    height: 28px;
+    justify-content: space-between;
+    border-radius: 8px;
+    padding-top: 4px;
+    padding-right: 24px;
+    padding-bottom: 4px;
+    padding-left: 24px;
+    background: #2f2f2f;
+  }
+  .movies-carousel {
+    width: fit-content;
+  }
+  .current-title {
+    font-family: Vazirmatn;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 62.5px;
+    letter-spacing: 0%;
+    width: fit-content;
+    margin: 0 auto;
+  }
+  .hero-overlay button {
+    display: none;
+  }
+  .over {
+    font-family: Vazirmatn;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18.75px;
+    letter-spacing: 0%;
+    text-align: justify;
+    color: #ffffff;
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
 @media (max-width: 415px) {
   .movie-card {
     max-width: 300px;
@@ -662,43 +725,29 @@
   .movies-carousel {
     width: fit-content;
   }
-}
-@media (max-width: 419px) {
-  .movie-card {
-    max-width: 300px;
-  }
-  .play-he {
-    display: flex;
-    align-items: center;
+  .current-title {
+    font-family: Vazirmatn;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 62.5px;
+    letter-spacing: 0%;
     width: fit-content;
     margin: 0 auto;
-    gap: 20rem;
   }
-  .play-he img {
+  .hero-overlay button {
     display: none;
   }
-  .hero-overlay {
-    margin-left: -5rem;
-  }
-  .frame-65 {
-    display: flex;
-    align-items: center;
-    width: fit-content;
-    margin: 0 auto;
-    /* position: absolute; */
-    margin-top: -0.7rem;
+  .over {
+    font-family: Vazirmatn;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18.75px;
+    letter-spacing: 0%;
+    text-align: justify;
+    color: #ffffff;
     width: 300px;
-    height: 28px;
-    justify-content: space-between;
-    border-radius: 8px;
-    padding-top: 4px;
-    padding-right: 24px;
-    padding-bottom: 4px;
-    padding-left: 24px;
-    background: #2f2f2f;
-  }
-  .movies-carousel {
-    width: fit-content;
+    margin: 0 auto;
+    text-align: center;
   }
 }
 @media (max-width: 391px) {
