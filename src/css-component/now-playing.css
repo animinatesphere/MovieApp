@@ -309,48 +309,7 @@
     margin-top: 1rem;
   }
 }
-@media screen and (max-width: 353px) {
-  .movies-grid2 {
-    grid-template-columns: repeat(
-      1,
-      1fr
-    ); /* Single column for very small screens */
-    gap: 10px;
-  }
 
-  .now-playing {
-    font-size: 16px;
-    line-height: 24px;
-  }
-
-  .now-title {
-    font-size: 12px;
-  }
-
-  .now-playing-page {
-    margin-top: 5rem;
-  }
-
-  .now-title {
-    font-family: Vazirmatn;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 27px;
-    margin-top: -4rem;
-    text-align: center;
-    color: #ffffff;
-  }
-
-  .now-playing-containe {
-    background: #030a1b;
-    height: auto;
-    padding-bottom: 2rem;
-  }
-
-  .comment {
-    margin-top: 1rem;
-  }
-}
 /*end  movie re */
 
 @media screen and (max-width: 1116px) {
@@ -688,68 +647,6 @@
     text-align: center;
   }
 }
-@media (max-width: 415px) {
-  .movie-card {
-    max-width: 300px;
-  }
-  .play-he {
-    display: flex;
-    align-items: center;
-    width: fit-content;
-    margin: 0 auto;
-    gap: 20rem;
-  }
-  .play-he img {
-    display: none;
-  }
-  .hero-overlay {
-    margin-left: -4rem;
-  }
-  .frame-65 {
-    display: flex;
-    align-items: center;
-    width: fit-content;
-    margin: 0 auto;
-    /* position: absolute; */
-    margin-top: -0.7rem;
-    width: 300px;
-    height: 28px;
-    justify-content: space-between;
-    border-radius: 8px;
-    padding-top: 4px;
-    padding-right: 24px;
-    padding-bottom: 4px;
-    padding-left: 24px;
-    background: #2f2f2f;
-  }
-  .movies-carousel {
-    width: fit-content;
-  }
-  .current-title {
-    font-family: Vazirmatn;
-    font-weight: 800;
-    font-size: 30px;
-    line-height: 62.5px;
-    letter-spacing: 0%;
-    width: fit-content;
-    margin: 0 auto;
-  }
-  .hero-overlay button {
-    display: none;
-  }
-  .over {
-    font-family: Vazirmatn;
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 18.75px;
-    letter-spacing: 0%;
-    text-align: justify;
-    color: #ffffff;
-    width: 300px;
-    margin: 0 auto;
-    text-align: center;
-  }
-}
 @media (max-width: 391px) {
   .movie-card {
     max-width: 300px;
@@ -801,7 +698,7 @@
     margin-left: -4rem;
     width: fit-content;
     /* margin: 0 auto; */
-
+    margin-top: 650px;
     /* padding-top: 150rem; */
     overflow-x: hidden;
   }
@@ -854,6 +751,9 @@
     color: #ebfaff;
     margin-top: 5rem;
   }
+  .hero-overlay {
+    margin-top: 200rem;
+  }
 }
 @media (max-width: 382px) {
   .movie-card {
@@ -892,15 +792,14 @@
   .current-title {
     font-family: Vazirmatn;
     font-weight: 800;
-    font-size: 25px;
+    font-size: 30px;
     line-height: 62.5px;
     letter-spacing: 0%;
     width: fit-content;
+    margin: 0 auto;
   }
-  .hero-overlay {
-    margin-left: -8rem;
-    /* padding-top: 150rem; */
-    width: fit-content;
+  .hero-overlay button {
+    display: none;
   }
   .over {
     font-family: Vazirmatn;
@@ -909,31 +808,10 @@
     line-height: 18.75px;
     letter-spacing: 0%;
     text-align: justify;
-    /* width: 10px;
-    height: 95px; */
     color: #ffffff;
     width: 300px;
-    margin-left: 2rem;
-  }
-  .hero-overlay button {
-    width: 280px;
-    height: 40px;
-    border-radius: 4px;
-    padding-top: 8px;
-    padding-right: 24px;
-    padding-bottom: 8px;
-    padding-left: 10px;
-    gap: 20px;
-    background: #df2144;
-    font-family: Vazirmatn;
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 25px;
-    letter-spacing: 0%;
+    margin: 0 auto;
     text-align: center;
-    color: #ffffff;
-    border: none;
-    margin-left: 2rem;
   }
 }
 @media (max-width: 362px) {
@@ -973,48 +851,26 @@
   .current-title {
     font-family: Vazirmatn;
     font-weight: 800;
-    font-size: 25px;
+    font-size: 30px;
     line-height: 62.5px;
     letter-spacing: 0%;
     width: fit-content;
+    margin: 0 auto;
   }
-  .hero-overlay {
-    margin-left: -8rem;
-    /* padding-top: 150rem; */
-    width: fit-content;
+  .hero-overlay button {
+    display: none;
   }
   .over {
     font-family: Vazirmatn;
     font-weight: 600;
-    font-size: 10px;
+    font-size: 12px;
     line-height: 18.75px;
     letter-spacing: 0%;
     text-align: justify;
-    /* width: 10px;
-    height: 95px; */
     color: #ffffff;
     width: 300px;
-    margin-left: 3rem;
-  }
-  .hero-overlay button {
-    width: 280px;
-    height: 40px;
-    border-radius: 4px;
-    padding-top: 8px;
-    padding-right: 24px;
-    padding-bottom: 8px;
-    padding-left: 10px;
-    gap: 20px;
-    background: #df2144;
-    font-family: Vazirmatn;
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 25px;
-    letter-spacing: 0%;
+    margin: 0 auto;
     text-align: center;
-    color: #ffffff;
-    border: none;
-    margin-left: 2rem;
   }
 }
 
@@ -1053,6 +909,9 @@
     width: fit-content;
     /* margin-left: -1rem; */
   }
+  .hero-overlay {
+    margin-left: -7rem;
+  }
   .current-title {
     font-family: Vazirmatn;
     font-weight: 800;
@@ -1060,48 +919,21 @@
     line-height: 62.5px;
     letter-spacing: 0%;
     width: fit-content;
+    margin: 0 auto;
   }
-  .hero-overlay {
-    margin-left: -2rem;
-    width: fit-content;
-    /* padding-top: 150rem; */
+  .hero-overlay button {
+    display: none;
   }
   .over {
     font-family: Vazirmatn;
     font-weight: 600;
-    font-size: 10px;
+    font-size: 12px;
     line-height: 18.75px;
     letter-spacing: 0%;
     text-align: justify;
-    /* width: 10px;
-    height: 95px; */
     color: #ffffff;
-    width: 200px;
-    /* margin-left: 2rem; */
-  }
-  .hero-overlay button {
-    /* display: none; */
-    width: 280px;
-    height: 40px;
-    border-radius: 4px;
-    padding-top: 8px;
-    padding-right: 24px;
-    padding-bottom: 8px;
-    padding-left: 10px;
-    gap: 20px;
-    background: #df2144;
-    font-family: Vazirmatn;
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 25px;
-    letter-spacing: 0%;
+    width: 300px;
+    margin: 0 auto;
     text-align: center;
-    color: #ffffff;
-    border: none;
-    margin-left: 2rem;
-  }
-  .hero-overlay img {
-    margin-left: -3rem;
-    width: fit-content;
   }
 }

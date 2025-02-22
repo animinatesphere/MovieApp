@@ -6,7 +6,7 @@
 }
 .hero-container {
   width: 100%;
-  height: 500px;
+  max-height: 900px;
   position: relative;
   /* margin-top: 10px; */
   transition: background-image 1s ease-in-out;
@@ -14,21 +14,22 @@
 
 .hero-overlay {
   position: absolute;
-  bottom: 200px;
+  bottom: 250px;
   left: 50px;
   color: white;
   /* background: rgba(0, 0, 0, 0.6); */
   padding: 20px;
   border-radius: 8px;
-  width: 400px;
+  width: 100%;
 }
 
 .current-title {
   font-family: Vazirmatn;
   font-weight: 800;
-  font-size: 40px;
+  font-size: 50px;
   line-height: 62.5px;
   letter-spacing: 0%;
+  text-align: center;
 }
 .over {
   font-family: Vazirmatn;
@@ -40,11 +41,13 @@
   /* width: 10px;
   height: 95px; */
   color: #ffffff;
-  width: 300px;
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
 }
 .hero-overlay button {
-  width: 342px;
-  height: 40px;
+  /* width: 342px;
+  height: 40px; */
   border-radius: 4px;
   padding-top: 8px;
   padding-right: 24px;
@@ -60,6 +63,14 @@
   text-align: right;
   color: #ffffff;
   border: none;
+  width: fit-content;
+  /* margin: 0 auto; */
+  margin-left: 43rem;
+}
+.hero-overlay img {
+  width: fit-content;
+  margin: 0 auto;
+  /* margin-left: 13rem; */
 }
 @media (max-width: 445px) {
   .movie-card {

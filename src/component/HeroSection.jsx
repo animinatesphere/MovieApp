@@ -59,7 +59,7 @@ const HeroSection = () => {
       <div className="hero-overlay">
         <h1 className="current-title">{currentMovie.title}</h1>
         <p className="over">{currentMovie.overview}</p>
-        <img src={frame} alt="" />
+
         <button>View and download in all qualities</button>
       </div>
     </div>
