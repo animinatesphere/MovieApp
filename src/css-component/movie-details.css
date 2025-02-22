@@ -475,7 +475,8 @@
     background: transparent;
     box-shadow: 0px 2px 4px 0px #00000033;
     cursor: pointer;
-    margin-left: 12rem;
+    margin-left: 9.5rem;
+
     margin-top: 3rem;
   }
   .footer {
@@ -502,6 +503,8 @@
     margin-top: 1rem;
   }
   .genre h1 {
+    width: fit-content;
+    margin: 0 auto;
     font-family: Lato;
     font-weight: 700;
     font-size: 30px;
@@ -512,8 +515,10 @@
   .gen-bu {
     display: flex;
     gap: 0.5rem;
+    width: fit-content;
+    margin: 0 auto;
     margin-top: 2rem;
-    margin-left: -3rem;
+    margin-left: -8vw;
   }
   .details h2 {
     width: fit-content;
@@ -530,12 +535,14 @@
   .details p {
     font-family: Lato;
     font-weight: 500;
-    font-size: 13px;
+    font-size: 12px;
     line-height: 28.8px;
     letter-spacing: 0%;
-    width: 320px;
+    /* width: 320px; */
+    width: fit-content;
+    margin: 0 auto;
     text-align: center;
-    margin-left: 7px;
+    /* margin-left: 7px; */
     color: #ffffff;
   }
   .play-sect {
