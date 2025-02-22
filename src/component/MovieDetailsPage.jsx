@@ -52,6 +52,7 @@ const MovieDetailsPage = () => {
             style={{
               backgroundImage: `url(https://image.tmdb.org/t/p/original${movie.backdrop_path})`,
               height: "809px",
+              backgroundRepeat: "no-repeat",
               width: "100%",
             }}
           >
