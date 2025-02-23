@@ -8,6 +8,7 @@ import AiringToday from "../component/AiringToday";
 import OnAir from "../component/OnAir";
 import RealFooter from "../component/RealFooter";
 import "../css-component/homepage.css";
+import TopRatedTV from "../component/TopRatedTV";
 
 const HomePage = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -36,6 +37,7 @@ const HomePage = () => {
       <HeroSection />
       <NowPlayingSection />
       <TopRatedMovies />
+      <TopRatedTV />
       <AiringToday />
       <OnAir />
       <RealFooter />

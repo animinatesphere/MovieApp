@@ -1,719 +1,326 @@
 @import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap");
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-.hero-container {
+
+.hero-section {
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 809px;
+  height: 100vh;
   position: relative;
   background-repeat: no-repeat;
-  transition: 1s ease-in-out;
+  transition: background 1s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
+/* Overlay Text */
 .hero-overlay {
   position: absolute;
-  bottom: 250px;
-  left: 50px;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
   color: white;
   background: rgba(0, 0, 0, 0.6);
   padding: 20px;
   border-radius: 8px;
-  width: 100%;
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
 }
 
 .current-title {
-  font-family: Vazirmatn;
+  font-family: Vazirmatn, sans-serif;
   font-weight: 800;
-  font-size: 50px;
-  line-height: 62.5px;
-  letter-spacing: 0%;
-  text-align: center;
+  font-size: 40px;
+  margin-bottom: 10px;
 }
-.over {
-  font-family: Vazirmatn;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 18.75px;
-  letter-spacing: 0%;
-  text-align: justify;
-  /* width: 10px;
-  height: 95px; */
+
+.movie-overview {
+  font-family: Vazirmatn, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
   color: #ffffff;
-  width: 500px;
-  margin: 0 auto;
-  text-align: center;
+  margin-bottom: 15px;
 }
-.hero-overlay button {
-  /* width: 342px;
-  height: 40px; */
-  border-radius: 4px;
-  padding-top: 8px;
-  padding-right: 24px;
-  padding-bottom: 8px;
-  padding-left: 24px;
-  gap: 20px;
+
+.watch-button {
   background: #df2144;
-  font-family: Vazirmatn;
+  font-family: Vazirmatn, sans-serif;
   font-weight: 500;
   font-size: 16px;
-  line-height: 25px;
-  letter-spacing: 0%;
-  text-align: right;
-  color: #ffffff;
+  color: white;
   border: none;
-  width: fit-content;
-  /* margin: 0 auto; */
-  margin-left: 43rem;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
-.hero-overlay img {
-  width: fit-content;
-  margin: 0 auto;
-  /* margin-left: 13rem; */
+
+.watch-button:hover {
+  background: #b81c38;
 }
-@media (max-width: 445px) {
-  .movie-card {
-    max-width: 350px;
-  }
-  .play-he {
-    display: flex;
-    align-items: center;
-    width: fit-content;
-    margin: 0 auto;
-    gap: 20rem;
-  }
-  .play-he img {
-    display: none;
-  }
-  .frame-65 {
-    display: flex;
-    align-items: center;
-    width: fit-content;
-    margin: 0 auto;
-    /* position: absolute; */
-    margin-top: -0.7rem;
-    width: 350px;
-    height: 28px;
-    justify-content: space-between;
-    border-radius: 8px;
-    padding-top: 4px;
-    padding-right: 24px;
-    padding-bottom: 4px;
-    padding-left: 24px;
-    background: #2f2f2f;
-  }
-  .movies-carousel {
-    width: fit-content;
-  }
+
+/* Navigation Buttons */
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  border-radius: 50%;
+}
+
+.nav-button:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.prev-button {
+  left: 5%;
+}
+
+.next-button {
+  right: 5%;
+}
+
+/* Responsive Design */
+
+/* Large screens (1200px and up) */
+@media (max-width: 1200px) {
   .current-title {
-    font-family: Vazirmatn;
-    font-weight: 800;
-    font-size: 30px;
-    line-height: 62.5px;
-    letter-spacing: 0%;
-    width: fit-content;
+    font-size: 38px;
   }
+
+  .movie-overview {
+    font-size: 15px;
+  }
+
   .hero-overlay {
-    margin-left: -3rem;
+    width: 75%;
   }
-  .current.over {
-    font-family: Vazirmatn;
-    font-weight: 600;
-    font-size: 10px;
-    line-height: 18.75px;
-    letter-spacing: 0%;
-    /* text-align: justify; */
-    /* width: 10px; */
-    /* height: 95px; */
-    color: #ffffff;
-    width: 280px;
+
+  .watch-button {
+    font-size: 15px;
+    padding: 10px 18px;
   }
-  .hero-overlay button {
-    width: 300px;
-    height: 40px;
-    border-radius: 4px;
-    padding-top: 8px;
-    padding-right: 24px;
-    padding-bottom: 8px;
-    padding-left: 24px;
-    gap: 20px;
-    background: #df2144;
-    font-family: Vazirmatn;
-    font-weight: 500;
+}
+
+/* Medium screens (992px and down) */
+@media (max-width: 992px) {
+  .current-title {
+    font-size: 35px;
+  }
+
+  .movie-overview {
+    font-size: 14px;
+  }
+
+  .hero-overlay {
+    bottom: 18%;
+    width: 85%;
+  }
+
+  .watch-button {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+
+  .nav-button {
+    font-size: 22px;
+    padding: 8px;
+  }
+
+  .prev-button {
+    left: 4%;
+  }
+
+  .next-button {
+    right: 4%;
+  }
+}
+
+/* Tablets (768px and down) */
+@media (max-width: 768px) {
+  .current-title {
+    font-size: 30px;
+  }
+
+  .movie-overview {
     font-size: 13px;
-    line-height: 25px;
-    letter-spacing: 0%;
-    text-align: center;
-    color: #ffffff;
-    border: none;
   }
-}
-@media (max-width: 445px) {
-  .movie-card {
-    max-width: 350px;
-  }
-  .play-he {
-    display: flex;
-    align-items: center;
-    width: fit-content;
-    margin: 0 auto;
-    gap: 20rem;
-  }
-  .play-he img {
-    display: none;
-  }
-  .frame-65 {
-    display: flex;
-    align-items: center;
-    width: fit-content;
-    margin: 0 auto;
-    /* position: absolute; */
-    margin-top: -0.7rem;
-    width: 350px;
-    height: 28px;
-    justify-content: space-between;
-    border-radius: 8px;
-    padding-top: 4px;
-    padding-right: 24px;
-    padding-bottom: 4px;
-    padding-left: 24px;
-    background: #2f2f2f;
-  }
-  .movies-carousel {
-    width: fit-content;
-  }
-  .current-title {
-    font-family: Vazirmatn;
-    font-weight: 800;
-    font-size: 30px;
-    line-height: 62.5px;
-    letter-spacing: 0%;
-    width: fit-content;
-  }
+
   .hero-overlay {
-    margin-left: -4rem;
-    margin-top: -7rem;
+    bottom: 15%;
+    width: 90%;
   }
-  .current.over {
-    font-family: Vazirmatn;
-    font-weight: 600;
-    font-size: 10px;
-    line-height: 18.75px;
-    letter-spacing: 0%;
-    /* text-align: justify; */
-    /* width: 10px; */
-    /* height: 95px; */
-    color: #ffffff;
-    width: 280px;
-  }
-  .hero-overlay button {
-    width: 300px;
-    height: 40px;
-    border-radius: 4px;
-    padding-top: 8px;
-    padding-right: 24px;
-    padding-bottom: 8px;
-    padding-left: 24px;
-    gap: 20px;
-    background: #df2144;
-    font-family: Vazirmatn;
-    font-weight: 500;
+
+  .watch-button {
     font-size: 13px;
-    line-height: 25px;
-    letter-spacing: 0%;
-    text-align: center;
-    color: #ffffff;
-    border: none;
+    padding: 10px 14px;
   }
-}
-@media (max-width: 417px) {
-  .movie-card {
-    max-width: 350px;
-  }
-  .play-he {
-    display: flex;
-    align-items: center;
-    width: fit-content;
-    margin: 0 auto;
-    gap: 20rem;
-  }
-  .play-he img {
-    display: none;
-  }
-  .frame-65 {
-    display: flex;
-    align-items: center;
-    width: fit-content;
-    margin: 0 auto;
-    /* position: absolute; */
-    margin-top: -0.7rem;
-    width: 350px;
-    height: 28px;
-    justify-content: space-between;
-    border-radius: 8px;
-    padding-top: 4px;
-    padding-right: 24px;
-    padding-bottom: 4px;
-    padding-left: 24px;
-    background: #2f2f2f;
-  }
-  .movies-carousel {
-    width: fit-content;
-  }
-  .current-title {
-    font-family: Vazirmatn;
-    font-weight: 800;
-    font-size: 30px;
-    line-height: 62.5px;
-    letter-spacing: 0%;
-    width: fit-content;
-  }
-  .hero-overlay {
-    margin-left: -3rem;
-    /* padding-top: 150rem; */
-  }
-  p.current.over {
-    font-family: Vazirmatn;
-    font-weight: 600;
+
+  .nav-button {
     font-size: 20px;
-    line-height: 18.75px;
-    letter-spacing: 0%;
-    /* text-align: justify; */
-    /* width: 10px; */
-    /* height: 95px; */
-    color: #ffffff;
-    width: 150px;
+    padding: 7px;
   }
-  .hero-overlay button {
-    width: 280px;
-    height: 40px;
-    border-radius: 4px;
-    padding-top: 8px;
-    padding-right: 24px;
-    padding-bottom: 8px;
-    padding-left: 10px;
-    gap: 20px;
-    background: #df2144;
-    font-family: Vazirmatn;
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 25px;
-    letter-spacing: 0%;
-    text-align: center;
-    color: #ffffff;
-    border: none;
-    margin-left: 2rem;
+
+  .prev-button {
+    left: 3%;
+  }
+
+  .next-button {
+    right: 3%;
   }
 }
-@media (max-width: 395px) {
-  .movie-card {
-    max-width: 350px;
-  }
-  .play-he {
-    display: flex;
-    align-items: center;
-    width: fit-content;
-    margin: 0 auto;
-    gap: 20rem;
-  }
-  .play-he img {
-    display: none;
-  }
-  .frame-65 {
-    display: flex;
-    align-items: center;
-    width: fit-content;
-    margin: 0 auto;
-    /* position: absolute; */
-    margin-top: -0.7rem;
-    width: 350px;
-    height: 28px;
-    justify-content: space-between;
-    border-radius: 8px;
-    padding-top: 4px;
-    padding-right: 24px;
-    padding-bottom: 4px;
-    padding-left: 24px;
-    background: #2f2f2f;
-  }
-  .movies-carousel {
-    width: fit-content;
-  }
+
+/* Small Phones (480px and down) */
+@media (max-width: 480px) {
   .current-title {
-    font-family: Vazirmatn;
-    font-weight: 800;
     font-size: 26px;
-    line-height: 62.5px;
-    letter-spacing: 0%;
-    width: fit-content;
-    margin-left: 3rem;
   }
-  .hero-overlay {
-    margin-left: -3rem;
-    /* padding-top: 150rem; */
-  }
-  .over {
-    font-family: Vazirmatn;
-    font-weight: 600;
+
+  .movie-overview {
     font-size: 12px;
-    line-height: 18.75px;
-    letter-spacing: 0%;
-    text-align: justify;
-    /* width: 10px;
-    height: 95px; */
-    color: #ffffff;
-    width: 300px;
-    margin-left: 2rem;
   }
-  .hero-overlay button {
-    width: 280px;
-    height: 40px;
-    border-radius: 4px;
-    padding-top: 8px;
-    padding-right: 24px;
-    padding-bottom: 8px;
-    padding-left: 10px;
-    gap: 20px;
-    background: #df2144;
-    font-family: Vazirmatn;
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 25px;
-    letter-spacing: 0%;
-    text-align: center;
-    color: #ffffff;
-    border: none;
-    margin-left: 2rem;
+
+  .hero-overlay {
+    bottom: 12%;
+    width: 95%;
+    padding: 15px;
+  }
+
+  .watch-button {
+    font-size: 12px;
+    padding: 9px 14px;
+  }
+
+  .nav-button {
+    font-size: 18px;
+    padding: 6px;
+  }
+
+  .prev-button {
+    left: 2%;
+  }
+
+  .next-button {
+    right: 2%;
   }
 }
-@media (max-width: 382px) {
-  .movie-card {
-    max-width: 350px;
-  }
-  .play-he {
-    display: flex;
-    align-items: center;
-    width: fit-content;
-    margin: 0 auto;
-    gap: 20rem;
-  }
-  .play-he img {
-    display: none;
-  }
-  .frame-65 {
-    display: flex;
-    align-items: center;
-    width: fit-content;
-    margin: 0 auto;
-    /* position: absolute; */
-    margin-top: -0.7rem;
-    width: 350px;
-    height: 28px;
-    justify-content: space-between;
-    border-radius: 8px;
-    padding-top: 4px;
-    padding-right: 24px;
-    padding-bottom: 4px;
-    padding-left: 24px;
-    background: #2f2f2f;
-  }
-  .movies-carousel {
-    width: fit-content;
-  }
+/* Responsive Design for 414px */
+@media (max-width: 415px) {
   .current-title {
-    font-family: Vazirmatn;
-    font-weight: 800;
-    font-size: 30px;
-    line-height: 62.5px;
-    letter-spacing: 0%;
-    width: fit-content;
+    font-size: 26px;
   }
-  .hero-overlay {
-    margin-left: 8rem;
-    width: fit-content;
-    /* padding-top: 150rem; */
-  }
-  .over {
-    font-family: Vazirmatn;
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 18.75px;
-    letter-spacing: 0%;
-    text-align: justify;
-    /* width: 10px;
-    height: 95px; */
-    color: #ffffff;
-    width: 300px;
-    margin-left: 2rem;
-  }
-  .hero-overlay button {
-    display: none;
-    width: 280px;
-    height: 40px;
-    border-radius: 4px;
-    padding-top: 8px;
-    padding-right: 24px;
-    padding-bottom: 8px;
-    padding-left: 10px;
-    gap: 20px;
-    background: #df2144;
-    font-family: Vazirmatn;
-    font-weight: 500;
+
+  .movie-overview {
     font-size: 13px;
-    line-height: 25px;
-    letter-spacing: 0%;
-    text-align: center;
-    color: #ffffff;
-    border: none;
-    margin-left: 2rem;
+  }
+
+  .hero-overlay {
+    bottom: 12%;
+    width: 85%;
+    left: 22rem;
+    padding: 15px;
+  }
+
+  .watch-button {
+    font-size: 13px;
+    padding: 10px 18px;
+  }
+
+  .nav-button {
+    font-size: 18px;
+    padding: 8px;
+  }
+
+  .prev-button {
+    left: 3%;
+  }
+
+  .next-button {
+    right: 3%;
   }
 }
-@media (max-width: 365px) {
-  .movie-card {
-    max-width: 350px;
-  }
-  .play-he {
-    display: flex;
-    align-items: center;
-    width: fit-content;
-    margin: 0 auto;
-    gap: 20rem;
-  }
-  .play-he img {
-    display: none;
-  }
-  .frame-65 {
-    display: flex;
-    align-items: center;
-    width: fit-content;
-    margin: 0 auto;
-    /* position: absolute; */
-    margin-top: -0.7rem;
-    width: 350px;
-    height: 28px;
-    justify-content: space-between;
-    border-radius: 8px;
-    padding-top: 4px;
-    padding-right: 24px;
-    padding-bottom: 4px;
-    padding-left: 24px;
-    background: #2f2f2f;
-  }
-  .movies-carousel {
-    width: fit-content;
-  }
+
+/* Extra Small Phones (350px and down) */
+@media (max-width: 350px) {
   .current-title {
-    font-family: Vazirmatn;
-    font-weight: 800;
-    font-size: 30px;
-    line-height: 62.5px;
-    letter-spacing: 0%;
-    width: fit-content;
+    font-size: 22px;
   }
+
+  .movie-overview {
+    font-size: 11px;
+  }
+
   .hero-overlay {
-    margin-left: -1rem;
-    width: fit-content;
-    /* padding-top: 150rem; */
+    bottom: 10%;
+    width: 98%;
+    padding: 12px;
   }
-  .over {
-    font-family: Vazirmatn;
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 18.75px;
-    letter-spacing: 0%;
-    text-align: justify;
-    /* width: 10px;
-    height: 95px; */
-    color: #ffffff;
-    width: 300px;
-    margin-left: 2rem;
+
+  .watch-button {
+    font-size: 11px;
+    padding: 8px 12px;
   }
-  .hero-overlay button {
-    /* display: none; */
-    width: 280px;
-    height: 40px;
-    border-radius: 4px;
-    padding-top: 8px;
-    padding-right: 24px;
-    padding-bottom: 8px;
-    padding-left: 10px;
-    gap: 20px;
-    background: #df2144;
-    font-family: Vazirmatn;
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 25px;
-    letter-spacing: 0%;
-    text-align: center;
-    color: #ffffff;
-    border: none;
-    margin-left: 2rem;
+
+  .nav-button {
+    font-size: 16px;
+    padding: 5px;
+  }
+
+  .prev-button {
+    left: 1.5%;
+  }
+
+  .next-button {
+    right: 1.5%;
   }
 }
-@media (max-width: 362px) {
-  .movie-card {
-    max-width: 350px;
-  }
-  .play-he {
-    display: flex;
-    align-items: center;
-    width: fit-content;
-    margin: 0 auto;
-    gap: 20rem;
-  }
-  .play-he img {
-    display: none;
-  }
-  .frame-65 {
-    display: flex;
-    align-items: center;
-    width: fit-content;
-    margin: 0 auto;
-    /* position: absolute; */
-    margin-top: -0.7rem;
-    width: 350px;
-    height: 28px;
-    justify-content: space-between;
-    border-radius: 8px;
-    padding-top: 4px;
-    padding-right: 24px;
-    padding-bottom: 4px;
-    padding-left: 24px;
-    background: #2f2f2f;
-  }
-  .movies-carousel {
-    width: fit-content;
-  }
+
+/* Ultra Small Screens (300px and down) */
+@media (max-width: 300px) {
   .current-title {
-    font-family: Vazirmatn;
-    font-weight: 800;
-    font-size: 30px;
-    line-height: 62.5px;
-    letter-spacing: 0%;
-    width: fit-content;
+    font-size: 18px;
   }
+
+  .movie-overview {
+    font-size: 10px;
+  }
+
   .hero-overlay {
-    margin-left: 4rem;
-    width: fit-content;
-    /* padding-top: 150rem; */
+    bottom: 8%;
+    width: 100%;
+    padding: 10px;
   }
-  .over {
-    font-family: Vazirmatn;
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 18.75px;
-    letter-spacing: 0%;
-    text-align: justify;
-    /* width: 10px;
-    height: 95px; */
-    color: #ffffff;
-    width: 300px;
-    margin-left: 5rem;
+
+  .watch-button {
+    font-size: 10px;
+    padding: 7px 10px;
   }
-  .hero-overlay button {
-    /* display: none; */
-    width: 280px;
-    height: 40px;
-    border-radius: 4px;
-    padding-top: 8px;
-    padding-right: 24px;
-    padding-bottom: 8px;
-    padding-left: 10px;
-    gap: 20px;
-    background: #df2144;
-    font-family: Vazirmatn;
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 25px;
-    letter-spacing: 0%;
-    text-align: center;
-    color: #ffffff;
-    border: none;
-    margin-left: 2rem;
+
+  .nav-button {
+    font-size: 14px;
+    padding: 4px;
   }
-}
-@media (max-width: 353px) {
-  .movie-card {
-    max-width: 350px;
+
+  .prev-button {
+    left: 1%;
   }
-  .play-he {
-    display: flex;
-    align-items: center;
-    width: fit-content;
-    margin: 0 auto;
-    gap: 20rem;
-  }
-  .play-he img {
-    display: none;
-  }
-  .frame-65 {
-    display: flex;
-    align-items: center;
-    width: fit-content;
-    margin: 0 auto;
-    /* position: absolute; */
-    margin-top: -0.7rem;
-    width: 350px;
-    height: 28px;
-    justify-content: space-between;
-    border-radius: 8px;
-    padding-top: 4px;
-    padding-right: 24px;
-    padding-bottom: 4px;
-    padding-left: 24px;
-    background: #2f2f2f;
-  }
-  .movies-carousel {
-    width: fit-content;
-  }
-  .current-title {
-    font-family: Vazirmatn;
-    font-weight: 800;
-    font-size: 30px;
-    line-height: 62.5px;
-    letter-spacing: 0%;
-    width: fit-content;
-  }
-  .hero-overlay {
-    margin-left: 20rem;
-    width: fit-content;
-    /* padding-top: 150rem; */
-  }
-  .over {
-    font-family: Vazirmatn;
-    font-weight: 600;
-    font-size: 2px;
-    line-height: 18.75px;
-    letter-spacing: 0%;
-    text-align: justify;
-    /* width: 10px;
-    height: 95px; */
-    color: #ffffff;
-    width: 200px;
-    margin-left: 6rem;
-  }
-  .hero-overlay button {
-    /* display: none; */
-    width: 280px;
-    height: 40px;
-    border-radius: 4px;
-    padding-top: 8px;
-    padding-right: 24px;
-    padding-bottom: 8px;
-    padding-left: 10px;
-    gap: 20px;
-    background: #df2144;
-    font-family: Vazirmatn;
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 25px;
-    letter-spacing: 0%;
-    text-align: center;
-    color: #ffffff;
-    border: none;
-    margin-left: 2rem;
+
+  .next-button {
+    right: 1%;
   }
 }

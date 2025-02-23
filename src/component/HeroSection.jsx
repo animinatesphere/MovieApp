@@ -1,61 +1,91 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 import "../css-component/hero-section.css";
-import frame from "../assets/Frame 54.png";
+import { Link } from "react-router-dom";
+import axios from "axios";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa"; // Import icons
 
-const Api_Key = import.meta.env.VITE_App_Base_Api_key;
-const Api_Url = import.meta.env.VITE_App_Base_Url;
+const API_KEY = import.meta.env.VITE_App_Base_Api_key;
+const API_URL = import.meta.env.VITE_App_Base_Url;
 
 const HeroSection = () => {
   const [movies, setMovies] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const fetchMovies = async () => {
-    try {
-      const res = await axios.get(
-        `${Api_Url}/movie/popular?language=en-US&page=1`,
-        {
-          headers: {
-            accept: "application/json",
-            Authorization: `Bearer ${Api_Key}`,
-          },
-        }
-      );
-      setMovies(res.data.results);
-    } catch (error) {
-      console.error("Error fetching movies:", error);
-    }
-  };
-
   useEffect(() => {
+    const fetchMovies = async () => {
+      try {
+        const res = await axios.get(
+          `${API_URL}/movie/popular?language=en-US&page=1`,
+          {
+            headers: {
+              accept: "application/json",
+              Authorization: `Bearer ${API_KEY}`,
+            },
+          }
+        );
+        setMovies(res.data.results);
+      } catch (error) {
+        console.error("Error fetching movies:", error);
+      }
+    };
     fetchMovies();
   }, []);
 
   useEffect(() => {
+    if (movies.length === 0) return;
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % movies.length);
-    }, 10000); // Change slide every 5 seconds
+    }, 5000);
 
     return () => clearInterval(interval);
   }, [movies]);
 
-  if (movies.length === 0) return <p>Loading...</p>;
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? movies.length - 1 : prevIndex - 1
+    );
+  };
 
-  const currentMovie = movies[currentIndex];
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % movies.length);
+  };
+
+  if (!movies.length) {
+    return <div className="loading">Loading...</div>;
+  }
+
+  const currentMovie = movies[currentIndex] || {};
+  const bgImage = currentMovie.backdrop_path
+    ? `url(https://image.tmdb.org/t/p/original${currentMovie.backdrop_path})`
+    : "none";
 
   return (
     <div
-      className="hero-container"
+      className="hero-section"
       style={{
-        backgroundImage: `url(https://image.tmdb.org/t/p/original${currentMovie.poster_path})`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), ${bgImage}`,
       }}
     >
       <div className="hero-overlay">
         <h1 className="current-title">{currentMovie.title}</h1>
-        <p className="over">{currentMovie.overview}</p>
-
-        <button>View and download in all qualities</button>
+        <p className="movie-overview">
+          {currentMovie.overview
+            ? currentMovie.overview.substring(0, 150)
+            : "No description available"}
+          ...
+        </p>
+        <Link to={`/movie/${currentMovie.id}`}>
+          <button className="watch-button">Watch Now</button>
+        </Link>
       </div>
+
+      {/* Navigation Buttons */}
+      <button className="nav-button prev-button" onClick={handlePrev}>
+        <FaChevronLeft />
+      </button>
+      <button className="nav-button next-button" onClick={handleNext}>
+        <FaChevronRight />
+      </button>
     </div>
   );
 };
