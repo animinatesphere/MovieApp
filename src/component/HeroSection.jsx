@@ -48,12 +48,6 @@ const HeroSection = () => {
       className="hero-container"
       style={{
         backgroundImage: `url(https://image.tmdb.org/t/p/original${currentMovie.poster_path})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        width: "100%",
-        height: "809px",
-        position: "relative",
-        backgroundRepeat: "no-repeat",
       }}
     >
       <div className="hero-overlay">

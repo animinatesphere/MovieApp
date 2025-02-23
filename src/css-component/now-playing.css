@@ -4,6 +4,9 @@
   box-sizing: border-box;
   overflow-x: hidden;
 }
+.play-sect {
+  overflow-x: hidden;
+}
 /* Now Playing Section */
 .now-playing-container {
   text-align: center;
@@ -123,7 +126,7 @@
   font-family: Vazirmatn;
   font-weight: 400;
   font-size: 14px;
-  line-height: 18.88px;
+  line-height: 20.88px;
   letter-spacing: 0%;
   color: #ffffff;
   margin-top: 1px;
@@ -249,7 +252,7 @@
 
 @media screen and (max-width: 480px) {
   .movies-grid2 {
-    grid-template-columns: repeat(2, 1fr); /* Adjust for small mobile screens */
+    grid-template-columns: repeat(2, 2fr); /* Adjust for small mobile screens */
     gap: 15px;
   }
 
@@ -357,7 +360,7 @@
     /* position: absolute; */
     margin-top: -0.7rem;
     width: 200px;
-    height: 28px;
+    height: 40px;
     justify-content: space-between;
     border-radius: 8px;
     padding-top: 4px;
@@ -601,6 +604,88 @@
   }
   .hero-overlay {
     margin-left: -5rem;
+    bottom: 150px;
+  }
+  .hero-container {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 509px;
+    position: relative;
+    background-repeat: no-repeat;
+    transition: 1sease-in-out;
+  }
+  .frame-65 {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    margin: 0 auto;
+    /* position: absolute; */
+    margin-top: -0.7rem;
+    width: 300px;
+    height: 28px;
+    justify-content: space-between;
+    border-radius: 8px;
+    padding-top: 4px;
+    padding-right: 24px;
+    padding-bottom: 4px;
+    padding-left: 24px;
+    background: #2f2f2f;
+  }
+  .movies-carousel {
+    width: fit-content;
+  }
+  .current-title {
+    font-family: Vazirmatn;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 62.5px;
+    letter-spacing: 0%;
+    width: fit-content;
+    margin: 0 auto;
+  }
+  .hero-overlay button {
+    display: none;
+  }
+  .over {
+    font-family: Vazirmatn;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18.75px;
+    letter-spacing: 0%;
+    text-align: justify;
+    color: #ffffff;
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+@media (max-width: 409px) {
+  .movie-card {
+    max-width: 300px;
+  }
+  .play-he {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    margin: 0 auto;
+    gap: 20rem;
+  }
+  .play-he img {
+    display: none;
+  }
+  .hero-overlay {
+    margin-left: -5rem;
+    bottom: 150px;
+  }
+  .hero-container {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 509px;
+    position: relative;
+    background-repeat: no-repeat;
+    transition: 1sease-in-out;
   }
   .frame-65 {
     display: flex;
@@ -872,6 +957,9 @@
     margin: 0 auto;
     text-align: center;
   }
+  .hero-container {
+    height: 400px;
+  }
 }
 
 @media (max-width: 353px) {
@@ -896,7 +984,7 @@
     /* position: absolute; */
     margin-top: -0.7rem;
     width: 300px;
-    height: 28px;
+    height: 40px;
     justify-content: space-between;
     border-radius: 8px;
     padding-top: 4px;
@@ -910,13 +998,14 @@
     /* margin-left: -1rem; */
   }
   .hero-overlay {
-    margin-left: -7rem;
+    margin-left: -4rem;
   }
+
   .current-title {
     font-family: Vazirmatn;
     font-weight: 800;
     font-size: 30px;
-    line-height: 62.5px;
+    line-height: 50.5px;
     letter-spacing: 0%;
     width: fit-content;
     margin: 0 auto;

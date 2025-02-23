@@ -5,6 +5,10 @@
   box-sizing: border-box;
   overflow-x: hidden;
 }
+.movie-banner {
+  height: 809px;
+  background-repeat: no-repeat;
+}
 .movie-container {
   background: #030a1b;
   width: 100%;
@@ -78,6 +82,7 @@
   height: 64px;
   border-radius: 12px;
   gap: 8px;
+  overflow-x: hidden;
 
   background: #228ee5;
   border: none;
@@ -444,12 +449,12 @@
     font-size: 14px;
     margin: 0 auto;
   }
-  .play1,
+  /* .play1,
   .play2 {
     width: 120px;
     height: 35px;
     font-size: 14px;
-  }
+  } */
   .details h2 {
     font-size: 24px;
   }
@@ -532,7 +537,7 @@
     line-height: 40.4px;
     letter-spacing: 0%;
     color: #ffffff;
-    /* margin-left: 15px; */
+    margin-left: 30px;
   }
   .details p {
     font-family: Lato;
@@ -541,20 +546,22 @@
     line-height: 28.8px;
     letter-spacing: 0%;
     /* width: 320px; */
-    width: 300px;
+    width: 320px;
     margin: 0 auto;
     text-align: center;
-    margin-left: 25px;
+    margin-left: 19px;
     color: #ffffff;
   }
   .play-sect {
     width: fit-content;
     margin: 0 auto;
     margin-top: 2rem;
+    overflow: hidden;
   }
   .play1 {
     width: 184px;
     height: 64px;
+    overflow: hidden;
     border-radius: 12px;
     gap: 8px;
     background: #228ee5;
@@ -570,6 +577,7 @@
   .play2 {
     width: 184px;
     height: 64px;
+    overflow: hidden;
     border-radius: 12px;
     border-width: 1px;
     gap: 8px;
@@ -636,5 +644,21 @@
   .gen-bu {
     gap: 0.5rem;
     padding-left: 2rem;
+  }
+  .hero-container {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 509px;
+    position: relative;
+    background-repeat: no-repeat;
+    transition: 1s ease-in-out;
+  }
+  .now-playing-containe {
+    background: #030a1b;
+    padding-top: 4rem;
+  }
+  .now {
+    margin-top: 2rem;
   }
 }
