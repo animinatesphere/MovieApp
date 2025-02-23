@@ -36,7 +36,13 @@ const MovieDetailsPage = () => {
     fetchMovieDetails();
   }, [id]);
 
-  if (!movie) return <p>Loading movie details...</p>;
+  if (!movie)
+    return (
+      <div className="loading-container">
+        <div className="spinner"></div>
+        <p>Fetching Movie Details...</p>
+      </div>
+    );
 
   // 🔹 Convert rating to a star count (direct integer)
   const starCount = Math.round(movie.vote_average); // Convert rating (e.g., 6.8 → 7 stars)
