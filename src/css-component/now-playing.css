@@ -13,13 +13,13 @@
 
 .movies-carousel {
   display: flex;
-  flex-wrap: wrap; /* Allow items to wrap instead of overflow */
+  flex-wrap: wrap;
   justify-content: center; /* Center the movies */
   gap: 10px;
   margin: 0 auto;
   margin-top: 2rem;
   max-width: 100%; /* Prevent overflow */
-  overflow: hidden; /* Hide any extra content */
+  overflow-x: hidden; /* Hide any extra content */
 }
 
 .movie-card {
@@ -215,7 +215,7 @@
 }
 .now-playing-containe {
   background: #030a1b;
-  height: 700px;
+
   margin-top: 0;
 }
 .comment {

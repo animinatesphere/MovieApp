@@ -4,13 +4,14 @@ import axios from "axios";
 import "../css-component/movie-details.css";
 import NavBar from "./NavBar";
 import like from "../assets/likes.png";
-import Suggestion from "./Suggestion";
-import card1 from "../assets/coment inputs.png";
-import card2 from "../assets/2.png";
-import card3 from "../assets/3.png";
-import card4 from "../assets/4.png";
-import FooterDetails from "./FooterDetails";
+// import Suggestion from "./Suggestion";
+// import card1 from "../assets/coment inputs.png";
+// import card2 from "../assets/2.png";
+// import card3 from "../assets/3.png";
+// import card4 from "../assets/4.png";
+// import FooterDetails from "./FooterDetails";
 import SuggestionTop from "./SuggestionTop";
+import RealFooter from "./RealFooter";
 
 const Api_Key = import.meta.env.VITE_App_Base_Api_key;
 const Api_Url = import.meta.env.VITE_App_Base_Url;
@@ -109,7 +110,7 @@ const AiringDetails = () => {
         </div>
       </div>
       <SuggestionTop />
-      <div className="comment">
+      {/* <div className="comment">
         <div className="comment-head">
           <h1>Comments</h1>
           <p> See More</p>
@@ -120,8 +121,8 @@ const AiringDetails = () => {
           <img src={card3} alt="comment 3" />
           <img src={card4} alt="comment 4" />
         </div>
-      </div>
-      <FooterDetails />
+      </div> */}
+      <RealFooter />
     </>
   );
 };

@@ -3,6 +3,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 .movie-container {
   background: #030a1b;
@@ -114,7 +115,6 @@
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   position: relative;
-  overflow: hidden;
 }
 
 .play-sect button::before {
@@ -275,7 +275,9 @@
   gap: 5rem;
   margin-top: 2rem;
 }
-
+.movies-carousel {
+  overflow-x: hidden;
+}
 /* Responsive Design */
 
 @media (max-width: 1200px) {
@@ -542,7 +544,7 @@
     width: 300px;
     margin: 0 auto;
     text-align: center;
-    /* margin-left: 7px; */
+    margin-left: 25px;
     color: #ffffff;
   }
   .play-sect {
@@ -612,10 +614,10 @@
     width: fit-content;
     margin: 0 auto;
   }
-  .movie-container,
+  /* .movie-container,
   .movie-details-container {
     overflow-x: hidden;
-  }
+  } */
   .gen-bu button {
     border: none;
     border-radius: 25px;
