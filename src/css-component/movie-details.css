@@ -413,30 +413,71 @@
 
 @media (max-width: 576px) {
   .detaails-ti {
+    width: fit-content;
+    margin: 0 auto;
     font-size: 30px;
     line-height: 40px;
   }
   .date,
   .vote {
     font-size: 16px;
+    width: fit-content;
+    margin: 0 auto;
   }
   .play1,
   .play2 {
     width: 150px;
     height: 40px;
     font-size: 16px;
+    overflow: hidden;
+    line-height: 10px;
   }
   .details h2 {
-    font-size: 28px;
+    font-size: 20px;
+    width: fit-content;
+    margin: 0 auto;
+    line-height: 25px;
+    margin-left: 4rem;
   }
   .details p {
-    font-size: 16px;
+    font-size: 15px;
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
   }
   .comment-head h1 {
     font-size: 32px;
   }
   .comment-head p {
     font-size: 20px;
+  }
+  .play-sect {
+    width: fit-content;
+    margin: 0 auto;
+  }
+  .play-he2 h2 {
+    margin-left: 4rem;
+  }
+  .view2 {
+    margin-top: 8rem;
+    width: 128px;
+    height: 36px;
+    border-radius: 4px;
+    gap: 4px;
+    border-width: 1px;
+    border: 1px solid #1eb7e8;
+    font-family: Vazirmatn;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 22.88px;
+    letter-spacing: 0%;
+    /* text-align: right; */
+    color: #1eb7e8;
+    background: transparent;
+    box-shadow: 0px 2px 4px 0px #00000033;
+    cursor: pointer;
+    margin-left: 12rem;
+    margin-top: 3rem;
   }
 }
 
@@ -661,5 +702,67 @@
   }
   .now {
     margin-top: 2rem;
+  }
+}
+@media screen and (max-width: 392px) {
+  .gen-bu {
+    gap: 4rem;
+    padding-left: 3rem;
+  }
+  .details p {
+    font-family: Lato;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 28.8px;
+    letter-spacing: 0%;
+    /* width: 320px; */
+    width: 320px;
+    margin: 0 auto;
+    text-align: center;
+    margin-left: 19px;
+    color: #ffffff;
+  }
+  .play-he2 h2 {
+    font-family: Vazirmatn;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 37.5px;
+    letter-spacing: 0%;
+    /* text-align: right; */
+    color: #ffffff;
+    text-align: left;
+    padding-left: 100px;
+    padding-top: 5rem;
+    width: fit-content;
+  }
+  .view2 {
+    margin-top: 8rem;
+    width: 128px;
+    height: 36px;
+    border-radius: 4px;
+    gap: 4px;
+    border-width: 1px;
+    border: 1px solid #1eb7e8;
+    font-family: Vazirmatn;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 22.88px;
+    letter-spacing: 0%;
+    /* text-align: right; */
+    color: #1eb7e8;
+    background: transparent;
+    box-shadow: 0px 2px 4px 0px #00000033;
+    cursor: pointer;
+    margin: 0 auto;
+    margin-left: 9.8rem;
+    margin-top: 3rem;
+  }
+  .gen-bu {
+    display: flex;
+    gap: 0.5rem;
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 2rem;
+    margin-left: -10vw;
   }
 }
