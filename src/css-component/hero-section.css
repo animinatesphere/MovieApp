@@ -254,7 +254,77 @@
     right: 3%;
   }
 }
+/* Responsive Design for 412px */
+@media (max-width: 413px) {
+  .current-title {
+    font-size: 24px;
+  }
 
+  .movie-overview {
+    font-size: 12px;
+  }
+
+  .hero-overlay {
+    bottom: 12%;
+    width: 90%; /* Adjust width to center content */
+    padding: 15px;
+    left: 50%;
+    transform: translateX(-50%); /* Ensure it's centered */
+  }
+
+  .watch-button {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+
+  .nav-button {
+    font-size: 18px;
+    padding: 6px;
+  }
+
+  .prev-button {
+    left: 2%;
+  }
+
+  .next-button {
+    right: 2%;
+  }
+}
+
+@media (max-width: 392px) {
+  .current-title {
+    font-size: 26px;
+  }
+
+  .movie-overview {
+    font-size: 13px;
+  }
+
+  .hero-overlay {
+    bottom: 14%;
+    width: 85%;
+    left: 20rem;
+    padding: 15px;
+  }
+
+  .watch-button {
+    font-size: 13px;
+    padding: 10px 18px;
+  }
+
+  .nav-button {
+    font-size: 18px;
+    padding: 8px;
+  }
+
+  .prev-button {
+    left: 3%;
+  }
+
+  .next-button {
+    right: 3%;
+  }
+}
 /* Extra Small Phones (350px and down) */
 @media (max-width: 350px) {
   .current-title {

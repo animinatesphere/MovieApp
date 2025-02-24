@@ -39,7 +39,7 @@ const TopRatedTV = () => {
     <>
       <div className="now-playing-container">
         <div className="play-he">
-          <img src={frame6} alt="Top Rated Header" />
+          <img src={frame6} alt="Top Rated TV Shows" />
           <h2>Top Rated TV Shows</h2>
         </div>
         <div className="movies-carousel">
@@ -50,25 +50,13 @@ const TopRatedTV = () => {
               onClick={() => navigate(`/tv/${show.id}`)}
             >
               <img
-                src={
-                  show.poster_path
-                    ? `https://image.tmdb.org/t/p/w500${show.poster_path}`
-                    : "fallback-image-url"
-                }
+                src={`https://image.tmdb.org/t/p/w500${show.poster_path}`}
                 alt={show.name}
               />
               <div className="frame-65">
                 <div className="frame-left">
                   <img src={frame352} alt="IMDB" />
-                  <p>{show.vote_average?.toFixed(1) || "N/A"}</p>
-                </div>
-                <div className="frame-right">
-                  <img src={frame35} alt="Runtime" />
-                  <p>
-                    {show.episode_run_time?.[0]
-                      ? `${show.episode_run_time[0]} min`
-                      : "N/A"}
-                  </p>
+                  <p>{show.vote_average.toFixed(1)}</p>
                 </div>
               </div>
               <p className="now">{show.name}</p>

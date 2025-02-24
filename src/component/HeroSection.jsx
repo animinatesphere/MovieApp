@@ -50,10 +50,6 @@ const HeroSection = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % movies.length);
   };
 
-  if (!movies.length) {
-    return <div className="loading">Loading...</div>;
-  }
-
   const currentMovie = movies[currentIndex] || {};
   const bgImage = currentMovie.backdrop_path
     ? `url(https://image.tmdb.org/t/p/original${currentMovie.backdrop_path})`

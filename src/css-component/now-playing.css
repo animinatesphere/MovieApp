@@ -147,6 +147,7 @@
   padding-bottom: 4px;
   padding-left: 24px;
   background: #2f2f2f;
+  overflow: hidden;
 }
 .frame-left img,
 .frame-right img {

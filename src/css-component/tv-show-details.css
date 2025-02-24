@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+/* General Styles */
+.tv-show-details {
+  padding: 20px;
+  color: #fff;
+  background: #0d0d0d;
+}
+
+/* Header Section */
+.tv-header {
+  background-size: cover;
+  background-position: center;
+  padding: 80px 20px;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.tv-header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.tv-header h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.tv-header p {
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* TV Show Info Section */
+.tv-info-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+}
+
+.tv-info-card {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+  max-width: 800px;
+  text-align: center;
+}
+
+/* Title */
+.tv-info-card h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #ffcc00;
+}
+
+/* Info Grid Layout */
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  text-align: left;
+}
+
+.info-grid p {
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+/* Button Group */
+.btn-group {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+/* Watch Button */
+.watch-btn {
+  background: #e50914;
+  color: white;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.watch-btn:hover {
+  background: #ff2e2e;
+}
+
+/* Watchlist Button */
+.watchlist-btn {
+  background: transparent;
+  color: white;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border: 2px solid #ffcc00;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.watchlist-btn:hover {
+  background: #ffcc00;
+  color: #000;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .tv-header {
+    padding: 70px 20px;
+  }
+  .tv-header h1 {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 992px) {
+  .tv-header {
+    padding: 60px 20px;
+  }
+  .tv-header h1 {
+    font-size: 34px;
+  }
+  .season-card {
+    width: 220px;
+  }
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .tv-header {
+    padding: 50px 15px;
+  }
+  .tv-header h1 {
+    font-size: 30px;
+  }
+  .tv-header p {
+    font-size: 16px;
+  }
+  .season-card {
+    width: 180px;
+  }
+  .btn-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tv-header {
+    padding: 40px 10px;
+  }
+  .tv-header h1 {
+    font-size: 26px;
+  }
+  .tv-header p {
+    font-size: 14px;
+  }
+  .season-card {
+    width: 150px;
+  }
+  .watch-btn,
+  .watchlist-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 360px) {
+  .tv-header {
+    padding: 30px 5px;
+  }
+  .tv-header h1 {
+    font-size: 22px;
+  }
+  .tv-header p {
+    font-size: 12px;
+  }
+  .season-card {
+    width: 130px;
+  }
+  .tv-info-card {
+    padding: 15px;
+  }
+}
