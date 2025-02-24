@@ -139,7 +139,7 @@
   /* position: absolute; */
   margin-top: -0.7rem;
   width: 224.8000030517578px;
-  height: 28px;
+  height: 40px;
   justify-content: space-between;
   border-radius: 8px;
   padding-top: 4px;
@@ -817,12 +817,12 @@
     width: fit-content;
     margin: 0 auto;
   }
-  .hero-container {
+  .hero-section {
     height: 500px;
   }
   .hero-overlay {
     margin-left: -4rem;
-    width: fit-content;
+    /* width: fit-content; */
     /* margin: 0 auto; */
     margin-top: 650px;
     /* padding-top: 150rem; */
