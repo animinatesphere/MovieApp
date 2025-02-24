@@ -188,8 +188,26 @@ a {
 /* Responsive Navbar */
 @media screen and (max-width: 480px) {
   .hamburger {
-    display: block;
-    position: fixed;
+    position: absolute;
+    top: 0;
+    left: 50%; /* Move the left edge to the center */
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 22rem;
+
+    /* position: fixed; */
+    border: linear-gradient(
+      89.97deg,
+      #228ee5 0.83%,
+      rgba(34, 142, 229, 0.18) 28.39%,
+      rgba(34, 142, 229, 0.14) 73.52%,
+      #228ee5 98.92%
+    );
+    background: #1a19194d;
+    backdrop-filter: blur(8px);
+    border-radius: 10px;
+    margin-top: 2rem;
   }
 
   .nav-logo-child {

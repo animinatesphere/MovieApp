@@ -18,13 +18,18 @@ const NavBar = () => {
 
   return (
     <>
-      <div className="nav-bar-container">
+      <div className="harm">
         {/* Hamburger Button for Mobile */}
         <button className="hamburger" onClick={toggleMenu}>
+          <div className="nav-bar-logo">
+            <img src={navlogo} alt="Logo" />
+          </div>
           <img src={isOpen ? closeIcon : menuIcon} alt="menu" />
         </button>
-
+      </div>
+      <div className="nav-bar-container">
         {/* Navbar Content */}
+
         <div className={`nav-logo-child ${isOpen ? "open" : ""}`}>
           {/* Logo */}
           <div className="nav-bar-logo">
