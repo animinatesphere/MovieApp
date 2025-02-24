@@ -39,8 +39,8 @@ const AiringToday = () => {
     <>
       <div className="now-playing-container">
         <div className="play-he">
-          <img src={frame6} alt="Top Rated Header" />
           <h2>Airing Today</h2>
+          <img src={frame6} alt="Top Rated Header" />
         </div>
         <div className="movies-carousel">
           {shows.slice(0, 5).map((show) => (
