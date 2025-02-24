@@ -976,6 +976,8 @@
   .movies-carousel {
     width: fit-content;
   }
+  .hero-overlay {
+  }
   .current-title {
     font-family: Vazirmatn;
     font-weight: 800;
