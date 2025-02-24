@@ -20,6 +20,42 @@
   text-align: center;
 }
 
+/* Dots Container */
+.dots-container {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Individual Dot */
+.dot {
+  width: 16px;
+  height: 16px;
+
+  background: #df2144;
+
+  border-radius: 50%;
+  margin: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* Active Dot */
+.dot.active {
+  box-shadow: 3px 0px 15px 0px #df2144cc;
+
+  box-shadow: -3px 0px 15px 0px #df2144cc;
+
+  box-shadow: 0px 3px 15px 0px #df2144cc;
+
+  box-shadow: 0px -3px 15px 0px #df2144cc;
+
+  transform: scale(1.3);
+}
+
 /* Overlay Text */
 .hero-overlay {
   position: absolute;
@@ -69,13 +105,17 @@
 }
 
 /* Navigation Buttons */
+
 .nav-button {
   position: absolute;
-  top: 50%;
+  top: 95%;
+
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
+  background: #1e1e1e;
+
   border: none;
-  color: white;
+  color: #df2144;
+
   font-size: 24px;
   padding: 10px;
   cursor: pointer;
@@ -88,11 +128,11 @@
 }
 
 .prev-button {
-  left: 5%;
+  left: 40%;
 }
 
 .next-button {
-  right: 5%;
+  right: 40%;
 }
 
 /* Responsive Design */

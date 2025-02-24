@@ -147,7 +147,6 @@
   padding-bottom: 4px;
   padding-left: 24px;
   background: #2f2f2f;
-  overflow: hidden;
 }
 .frame-left img,
 .frame-right img {
@@ -796,7 +795,7 @@
     /* position: absolute; */
     margin-top: -0.7rem;
     width: 300px;
-    height: 28px;
+    height: 40px;
     justify-content: space-between;
     border-radius: 8px;
     padding-top: 4px;
@@ -823,7 +822,7 @@
   }
   .hero-overlay {
     margin-left: -4rem;
-    width: 100%;
+    width: fit-content;
     /* margin: 0 auto; */
     margin-top: 650px;
     /* padding-top: 150rem; */
@@ -878,9 +877,9 @@
     color: #ebfaff;
     margin-top: 5rem;
   }
-  /* .hero-overlay {
+  .hero-overlay {
     margin-top: 200rem;
-  } */
+  }
 }
 @media (max-width: 382px) {
   .movie-card {

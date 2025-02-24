@@ -37,6 +37,7 @@ const HomePage = () => {
       <HeroSection />
       <NowPlayingSection />
       <TopRatedMovies />
+      <HeroSection />
       <TopRatedTV />
       <AiringToday />
       <OnAir />

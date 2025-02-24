@@ -23,7 +23,7 @@ const HeroSection = () => {
             },
           }
         );
-        setMovies(res.data.results);
+        setMovies(res.data.results.slice(0, 6));
       } catch (error) {
         console.error("Error fetching movies:", error);
       }
@@ -48,6 +48,10 @@ const HeroSection = () => {
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % movies.length);
+  };
+
+  const handleDotClick = (index) => {
+    setCurrentIndex(index);
   };
 
   const currentMovie = movies[currentIndex] || {};
@@ -82,6 +86,17 @@ const HeroSection = () => {
       <button className="nav-button next-button" onClick={handleNext}>
         <FaChevronRight />
       </button>
+
+      {/* Dots for Slide Navigation */}
+      <div className="dots-container">
+        {movies.map((_, index) => (
+          <span
+            key={index}
+            className={`dot ${currentIndex === index ? "active" : ""}`}
+            onClick={() => handleDotClick(index)}
+          ></span>
+        ))}
+      </div>
     </div>
   );
 };
