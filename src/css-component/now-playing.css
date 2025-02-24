@@ -823,7 +823,7 @@
     height: 500px;
   }
   .hero-overlay {
-    margin-left: -4rem;
+    /* margin-left: -4rem; */
     /* width: fit-content; */
     /* margin: 0 auto; */
     margin-top: 650px;
