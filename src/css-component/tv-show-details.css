@@ -6,211 +6,199 @@
   box-sizing: border-box;
   font-family: "Lato", sans-serif;
 }
-
-/* General Styles */
-.tv-show-details {
-  padding: 20px;
-  color: #fff;
-  background: #0d0d0d;
-}
-
-/* Header Section */
-.tv-header {
-  background-size: cover;
-  background-position: center;
-  padding: 80px 20px;
-  color: white;
+/* Seasons Section Title */
+.se {
   text-align: center;
+  font-size: 2rem;
+  color: #4db8ff; /* Light blue to match the theme */
+  margin-top: 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
   position: relative;
-  height: 509px;
+  /* display: inline-block; */
 }
-
-.tv-header::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-}
-
-.tv-header h1 {
-  font-size: 42px;
-  margin-bottom: 10px;
-  position: relative;
-  z-index: 1;
-}
-
-.tv-header p {
-  font-size: 18px;
-  line-height: 1.6;
-  max-width: 800px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 1;
-}
-
-/* TV Show Info Section */
-.tv-info-container {
-  display: flex;
+/* TV Scenes */
+/* Scene Gallery Grid Layout */
+.scene-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  padding: 20px;
   justify-content: center;
   align-items: center;
-  margin: 40px 0;
 }
 
-.tv-info-card {
-  background: #1a1a1a;
-  color: #fff;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
-  max-width: 800px;
-  text-align: center;
-}
-
-/* Title */
-.tv-info-card h2 {
-  font-size: 28px;
-  margin-bottom: 15px;
-  color: #ffcc00;
-}
-
-/* Info Grid Layout */
-.info-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 15px;
-  text-align: left;
-}
-
-.info-grid p {
-  font-size: 16px;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 8px 12px;
+.scene-image {
+  width: 100%;
+  height: auto;
   border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
 }
 
-/* Button Group */
-.btn-group {
-  margin-top: 20px;
-  display: flex;
-  gap: 15px;
-  justify-content: center;
+.scene-image:hover {
+  transform: scale(1.05);
 }
 
-/* Watch Button */
-.watch-btn {
-  background: #e50914;
-  color: white;
-  padding: 10px 20px;
-  font-size: 18px;
-  font-weight: bold;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
-.watch-btn:hover {
-  background: #ff2e2e;
-}
-
-/* Watchlist Button */
-.watchlist-btn {
-  background: transparent;
-  color: white;
-  padding: 10px 20px;
-  font-size: 18px;
-  font-weight: bold;
-  border: 2px solid #ffcc00;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
-.watchlist-btn:hover {
-  background: #ffcc00;
-  color: #000;
-}
-
-/* Responsive Design */
-@media (max-width: 1200px) {
-  .tv-header {
-    padding: 70px 20px;
-  }
-  .tv-header h1 {
-    font-size: 38px;
-  }
-}
-
-@media (max-width: 992px) {
-  .tv-header {
-    padding: 60px 20px;
-  }
-  .tv-header h1 {
-    font-size: 34px;
-  }
-  .season-card {
-    width: 220px;
-  }
-  .info-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 768px) {
-  .tv-header {
-    padding: 50px 15px;
-  }
-  .tv-header h1 {
-    font-size: 30px;
-  }
-  .tv-header p {
-    font-size: 16px;
-  }
-  .season-card {
-    width: 180px;
-  }
-  .btn-group {
-    flex-direction: column;
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .scene-gallery {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 10px;
   }
 }
 
-@media (max-width: 480px) {
-  .tv-header {
-    padding: 40px 10px;
-  }
-  .tv-header h1 {
-    font-size: 26px;
-  }
-  .tv-header p {
-    font-size: 14px;
-  }
-  .season-card {
-    width: 150px;
-  }
-  .watch-btn,
-  .watchlist-btn {
-    width: 100%;
+@media (max-width: 768px) {
+  .scene-gallery {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 8px;
   }
 }
 
-@media (max-width: 360px) {
-  .tv-header {
-    padding: 30px 5px;
+@media (max-width: 480px) {
+  .scene-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
   }
-  .tv-header h1 {
-    font-size: 22px;
+}
+
+/* Cast List */
+.cast-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.cast-card {
+  text-align: center;
+  width: 150px;
+}
+
+.cast-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.cast-card h3 {
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.cast-card p {
+  font-size: 14px;
+  color: gray;
+}
+/* tails */
+/* Underline Effect */
+.se::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #4db8ff;
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .se {
+    font-size: 1.8rem;
   }
-  .tv-header p {
-    font-size: 12px;
+
+  .se::after {
+    width: 50px;
   }
+}
+
+@media (max-width: 480px) {
+  .se {
+    font-size: 1.5rem;
+  }
+
+  .se::after {
+    width: 40px;
+  }
+}
+
+/* Seasons Section */
+.seasons-list {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  ); /* Responsive grid */
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+/* Season Card */
+.season-card {
+  background: #1a1a1a;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.season-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Season Image */
+.season-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+
+/* Season Info */
+.season-info {
+  padding: 15px;
+  text-align: center;
+  color: #fff;
+}
+
+.season-info h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: #4db8ff; /* Light blue title */
+}
+
+.season-info p {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin: 5px 0;
+}
+
+.season-info strong {
+  color: #fff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .seasons-list {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .season-card img {
+    height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .seasons-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .season-card {
-    width: 130px;
-  }
-  .tv-info-card {
-    padding: 15px;
+    width: 90%;
   }
 }
