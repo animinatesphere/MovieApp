@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "../css-component/now-playing.css";
 import frame6 from "../assets/Frame 352.png";
-import "../css-component/now-playing.css";
 import frame352 from "../assets/cib_imdb.png";
 import frame35 from "../assets/zondicons_time.png";
 import RealFooter from "./RealFooter";
@@ -13,8 +12,10 @@ const Api_Url = import.meta.env.VITE_App_Base_Url;
 
 const NowPlayingSection = () => {
   const [movies, setMovies] = useState([]);
+  const [genres, setGenres] = useState({});
   const navigate = useNavigate();
 
+  // Fetch Now Playing Movies
   useEffect(() => {
     const fetchNowPlaying = async () => {
       try {
@@ -33,7 +34,26 @@ const NowPlayingSection = () => {
       }
     };
 
+    const fetchGenres = async () => {
+      try {
+        const res = await axios.get(`${Api_Url}/genre/movie/list?language=en`, {
+          headers: {
+            accept: "application/json",
+            Authorization: `Bearer ${Api_Key}`,
+          },
+        });
+        const genreMap = res.data.genres.reduce((acc, genre) => {
+          acc[genre.id] = genre.name;
+          return acc;
+        }, {});
+        setGenres(genreMap);
+      } catch (error) {
+        console.error("Error fetching genres:", error);
+      }
+    };
+
     fetchNowPlaying();
+    fetchGenres();
   }, []);
 
   return (
@@ -54,23 +74,36 @@ const NowPlayingSection = () => {
                 src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                 alt={movie.title}
               />
+              <div className="movie-info">
+                <h3 className="movie-title">{movie.title}</h3>
+                <p className="movie-release">
+                  <strong>Release Date:</strong> {movie.release_date}
+                </p>
+                <p className="movie-genres">
+                  <strong>Genres:</strong>{" "}
+                  {movie.genre_ids.map((id) => genres[id]).join(", ") || "N/A"}
+                </p>
+                <p className="movie-overview">
+                  {movie.overview.length > 100
+                    ? movie.overview.substring(0, 100) + "..."
+                    : movie.overview}
+                </p>
+              </div>
               <div className="frame-65">
                 <div className="frame-left">
-                  <img src={frame352} alt="" />
-                  <p>{movie.vote_average}</p>
+                  <img src={frame352} alt="IMDb" />
+                  <p>{movie.vote_average.toFixed(1)}</p>
                 </div>
                 <div className="frame-right">
-                  <img src={frame35} alt="" />
-                  <p>{movie.runtime}</p>
+                  <img src={frame35} alt="Runtime" />
+                  <p>{movie.runtime || "N/A"} mins</p>
                 </div>
               </div>
-              <p className="now">{movie.title}</p>
             </div>
           ))}
         </div>
 
         <button onClick={() => navigate("/now-playing")} className="view">
-          {" "}
           View More
         </button>
       </div>

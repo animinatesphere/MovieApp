@@ -11,6 +11,7 @@ const Api_Url = import.meta.env.VITE_App_Base_Url;
 
 const OnAir = () => {
   const [shows, setShows] = useState([]);
+  const [genres, setGenres] = useState({});
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -31,7 +32,26 @@ const OnAir = () => {
       }
     };
 
+    const fetchGenres = async () => {
+      try {
+        const res = await axios.get(`${Api_Url}/genre/tv/list?language=en`, {
+          headers: {
+            accept: "application/json",
+            Authorization: `Bearer ${Api_Key}`,
+          },
+        });
+        const genreMap = res.data.genres.reduce((acc, genre) => {
+          acc[genre.id] = genre.name;
+          return acc;
+        }, {});
+        setGenres(genreMap);
+      } catch (error) {
+        console.error("Error fetching genres:", error);
+      }
+    };
+
     fetchOnAirShows();
+    fetchGenres();
   }, []);
 
   return (
@@ -55,6 +75,21 @@ const OnAir = () => {
               }
               alt={show.name}
             />
+            <div className="movie-info">
+              <h3 className="movie-title">{show.name}</h3>
+              <p className="movie-release">
+                <strong>First Air Date:</strong> {show.first_air_date || "N/A"}
+              </p>
+              <p className="movie-genres">
+                <strong>Genres:</strong>{" "}
+                {show.genre_ids.map((id) => genres[id]).join(", ") || "N/A"}
+              </p>
+              <p className="movie-overview">
+                {show.overview.length > 100
+                  ? show.overview.substring(0, 100) + "..."
+                  : show.overview}
+              </p>
+            </div>
             <div className="frame-65">
               <div className="frame-left">
                 <img src={frame352} alt="IMDB" />
@@ -69,12 +104,11 @@ const OnAir = () => {
                 </p>
               </div>
             </div>
-            <p className="now">{show.name}</p>
           </div>
         ))}
       </div>
 
-      <button onClick={() => navigate("/airing-today")} className="view">
+      <button onClick={() => navigate("/on-air")} className="view">
         View More
       </button>
     </div>
