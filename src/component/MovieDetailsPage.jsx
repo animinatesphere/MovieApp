@@ -6,6 +6,7 @@ import NavBar from "./NavBar";
 import like from "../assets/likes.png";
 // import Suggestion from "./Suggestion";
 import RealFooter from "./RealFooter";
+// import React from "react";
 // import card1 from "../assets/coment inputs.png";
 // import card2 from "../assets/2.png";
 // import card3 from "../assets/3.png";
@@ -17,6 +18,7 @@ const Api_Url = import.meta.env.VITE_App_Base_Url;
 const MovieDetailsPage = () => {
   const { id } = useParams(); // Get movie ID from URL
   const [movie, setMovie] = useState(null);
+  const [scenes, setScenes] = useState([]);
 
   useEffect(() => {
     const fetchMovieDetails = async () => {
@@ -27,7 +29,15 @@ const MovieDetailsPage = () => {
             Authorization: `Bearer ${Api_Key}`,
           },
         });
+
         setMovie(res.data);
+        const imagesRes = await axios.get(`${Api_Url}/tv/${id}/images`, {
+          headers: {
+            accept: "application/json",
+            Authorization: `Bearer ${Api_Key}`,
+          },
+        });
+        setScenes(imagesRes.data.backdrops.slice(0, 10)); // Get first 10 backdrops
       } catch (error) {
         console.error("Error fetching movie details:", error);
       }
@@ -78,6 +88,23 @@ const MovieDetailsPage = () => {
             </div>
           </div>
           <div className="movie-info2">
+            {/* TV Show Scenes */}
+            <h2 className="se">TV Scenes</h2>
+            <div className="scene-gallery">
+              {scenes.length > 0 ? (
+                scenes.map((scene, index) => (
+                  <img
+                    key={index}
+                    src={`https://image.tmdb.org/t/p/w500${scene.file_path}`}
+                    alt={`Scene ${index + 1}`}
+                    className="scene-image"
+                  />
+                ))
+              ) : (
+                <p>No scenes available.</p>
+              )}
+            </div>
+
             <div className="details">
               <h2>About {movie.title}</h2>
               <p>{movie.overview}</p>
