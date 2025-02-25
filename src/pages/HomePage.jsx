@@ -4,7 +4,7 @@ import HeroSection from "../component/HeroSection";
 import NowPlayingSection from "../component/NowPlayingSection";
 import "../css-component/homepage.css";
 import TopRatedMovies from "../component/TopRatedMovies";
-import AiringToday from "../component/AiringToday";
+// import AiringToday from "../component/AiringToday";
 import OnAir from "../component/OnAir";
 import RealFooter from "../component/RealFooter";
 import "../css-component/homepage.css";
@@ -39,7 +39,7 @@ const HomePage = () => {
       <TopRatedMovies />
       <HeroSection />
       <TopRatedTV />
-      <AiringToday />
+      {/* <AiringToday /> */}
       <OnAir />
       <RealFooter />
     </div>
