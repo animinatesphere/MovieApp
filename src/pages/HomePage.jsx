@@ -9,6 +9,7 @@ import OnAir from "../component/OnAir";
 import RealFooter from "../component/RealFooter";
 import "../css-component/homepage.css";
 import TopRatedTV from "../component/TopRatedTV";
+import AuthForm from "../component/AuthForm";
 
 const HomePage = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -41,6 +42,7 @@ const HomePage = () => {
       <TopRatedTV />
       {/* <AiringToday /> */}
       <OnAir />
+      <AuthForm />
       <RealFooter />
     </div>
   );

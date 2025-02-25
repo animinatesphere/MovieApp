@@ -559,7 +559,7 @@
 }
 @media (max-width: 391px) {
   .movie-card {
-    max-width: 300px;
+    width: 300px;
   }
   .play-he {
     display: flex;

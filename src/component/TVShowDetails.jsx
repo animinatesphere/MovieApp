@@ -55,7 +55,12 @@ const TVShowDetails = () => {
   }, [id]);
 
   if (!tvShow) {
-    return <div className="loading">Loading...</div>;
+    return (
+      <div className="loading-container">
+        <div className="spinner"></div>
+        <p>Loading Movies...</p>
+      </div>
+    );
   }
 
   // Convert rating to a star count
