@@ -5,6 +5,7 @@ import "../css-component/tv-show-details.css";
 import NavBar from "./NavBar";
 import RealFooter from "./RealFooter";
 import like from "../assets/likes.png";
+import StarRating from "./StarRating";
 
 const Api_Key = import.meta.env.VITE_App_Base_Api_key;
 const Api_Url = import.meta.env.VITE_App_Base_Url;
@@ -64,9 +65,7 @@ const TVShowDetails = () => {
   }
 
   // Convert rating to a star count
-  const starCount = Math.round(tvShow.vote_average);
-  const stars = Array(starCount).fill("⭐");
-
+  <StarRating />;
   return (
     <>
       <NavBar />
@@ -82,11 +81,7 @@ const TVShowDetails = () => {
             <p className="date">
               {tvShow.first_air_date} - {tvShow.runtime || "N/A"} mins
             </p>
-            <p className="vote">
-              {stars.map((star, index) => (
-                <span key={index}>{star}</span>
-              ))}
-            </p>
+            <StarRating rating={tvShow.vote_average} />
             <img src={like} alt="like icon" className="like" />
           </div>
           <div className="play-sect">

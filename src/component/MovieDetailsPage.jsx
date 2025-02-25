@@ -5,6 +5,7 @@ import "../css-component/movie-details.css";
 import NavBar from "./NavBar";
 import like from "../assets/likes.png";
 import RealFooter from "./RealFooter";
+import StarRating from "./StarRating";
 
 const Api_Key = import.meta.env.VITE_App_Base_Api_key;
 const Api_Url = import.meta.env.VITE_App_Base_Url;
@@ -61,9 +62,7 @@ const MovieDetailsPage = () => {
     );
 
   // Convert rating to stars
-  const starCount = Math.round(movie.vote_average);
-  const stars = Array(starCount).fill("⭐");
-
+  <StarRating />;
   return (
     <>
       <div className="movie-container">
@@ -81,11 +80,8 @@ const MovieDetailsPage = () => {
                 {movie.release_date} - {movie.runtime} mins{" "}
                 {movie.origin_country}
               </p>
-              <p className="vote">
-                {stars.map((star, index) => (
-                  <span key={index}>{star}</span>
-                ))}
-              </p>
+              <StarRating rating={movie.vote_average} />
+
               <img src={like} alt="Like" className="like" />
             </div>
             <div className="play-sect">
