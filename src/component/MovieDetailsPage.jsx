@@ -4,7 +4,7 @@ import axios from "axios";
 import "../css-component/movie-details.css";
 import NavBar from "./NavBar";
 import like from "../assets/likes.png";
-import Suggestion from "./Suggestion";
+// import Suggestion from "./Suggestion";
 import RealFooter from "./RealFooter";
 // import card1 from "../assets/coment inputs.png";
 // import card2 from "../assets/2.png";
@@ -77,7 +77,7 @@ const MovieDetailsPage = () => {
               <button className="play2">Preview</button>
             </div>
           </div>
-          <div className="movie-info">
+          <div className="movie-info2">
             <div className="details">
               <h2>About {movie.title}</h2>
               <p>{movie.overview}</p>
@@ -112,7 +112,7 @@ const MovieDetailsPage = () => {
             </div>
           </div>
         </div>
-        <Suggestion />
+        {/* <Suggestion /> */}
         {/* <div className="comment">
           <div className="comment-head">
             <h1>Comments</h1>

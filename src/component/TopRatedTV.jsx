@@ -78,9 +78,16 @@ const TopRatedTV = () => {
                   <strong>First Air Date:</strong> {show.first_air_date}
                 </p>
                 <p className="movie-genres">
-                  <strong>Genres:</strong>{" "}
-                  {show.genre_ids.map((id) => genres[id]).join(", ") || "N/A"}
+                  <strong>Genres:</strong>
+                  {show.genre_ids.map((id) =>
+                    genres[id] ? (
+                      <button key={id} className="genre-btn">
+                        {genres[id]}
+                      </button>
+                    ) : null
+                  )}
                 </p>
+
                 <p className="movie-overview">
                   {show.overview.length > 100
                     ? show.overview.substring(0, 100) + "..."
@@ -93,6 +100,7 @@ const TopRatedTV = () => {
                   <p>{show.vote_average.toFixed(1)}</p>
                 </div>
               </div>
+              <h3 className="movie-title">{show.name}</h3>
             </div>
           ))}
         </div>

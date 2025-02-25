@@ -75,14 +75,20 @@ const AiringToday = () => {
               }
               alt={show.name}
             />
-            <div className="movie-info">
+            <div className="movie-info-2">
               <h3 className="movie-title">{show.name}</h3>
               <p className="movie-release">
                 <strong>First Air Date:</strong> {show.first_air_date || "N/A"}
               </p>
               <p className="movie-genres">
-                <strong>Genres:</strong>{" "}
-                {show.genre_ids.map((id) => genres[id]).join(", ") || "N/A"}
+                <strong>Genres:</strong>
+                {show.genre_ids.map((id) =>
+                  genres[id] ? (
+                    <button key={id} className="genre-btn">
+                      {genres[id]}
+                    </button>
+                  ) : null
+                )}
               </p>
               <p className="movie-overview">
                 {show.overview.length > 100
@@ -104,6 +110,7 @@ const AiringToday = () => {
                 </p>
               </div>
             </div>
+            <h3 className="movie-title">{show.name}</h3>
           </div>
         ))}
       </div>

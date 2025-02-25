@@ -22,7 +22,9 @@ const NavBar = () => {
         {/* Hamburger Button for Mobile */}
         <button className="hamburger" onClick={toggleMenu}>
           <div className="nav-bar-logo">
-            <img src={navlogo} alt="Logo" />
+            <a href="/">
+              <img src={navlogo} alt="Logo" />
+            </a>
           </div>
           <img src={isOpen ? closeIcon : menuIcon} alt="menu" />
         </button>

@@ -75,13 +75,18 @@ const NowPlayingSection = () => {
                 alt={movie.title}
               />
               <div className="movie-info">
-                <h3 className="movie-title">{movie.title}</h3>
                 <p className="movie-release">
                   <strong>Release Date:</strong> {movie.release_date}
                 </p>
                 <p className="movie-genres">
-                  <strong>Genres:</strong>{" "}
-                  {movie.genre_ids.map((id) => genres[id]).join(", ") || "N/A"}
+                  <strong>Genres:</strong>
+                  {movie.genre_ids.map((id) =>
+                    genres[id] ? (
+                      <button key={id} className="genre-btn">
+                        {genres[id]}
+                      </button>
+                    ) : null
+                  )}
                 </p>
                 <p className="movie-overview">
                   {movie.overview.length > 100
@@ -99,6 +104,7 @@ const NowPlayingSection = () => {
                   <p>{movie.runtime || "N/A"} mins</p>
                 </div>
               </div>
+              <h3 className="movie-title">{movie.title}</h3>
             </div>
           ))}
         </div>

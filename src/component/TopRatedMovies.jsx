@@ -53,6 +53,16 @@ const TopRatedMovies = () => {
             />
             <div className="movie-info">
               <h3 className="movie-title">{movie.title}</h3>
+              <p className="movie-genres">
+                <strong>Genres:</strong>
+                {movie.genre_ids.map((id) =>
+                  movie[id] ? (
+                    <button key={id} className="genre-btn">
+                      {movie[id]}
+                    </button>
+                  ) : null
+                )}
+              </p>
               <p className="movie-release">
                 <strong>Release Date:</strong> {movie.release_date}
               </p>
@@ -72,6 +82,7 @@ const TopRatedMovies = () => {
                 <p>{movie.runtime || "N/A"} mins</p>
               </div>
             </div>
+            <h3 className="movie-title">{movie.title}</h3>
           </div>
         ))}
       </div>

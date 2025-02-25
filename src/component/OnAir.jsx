@@ -81,8 +81,14 @@ const OnAir = () => {
                 <strong>First Air Date:</strong> {show.first_air_date || "N/A"}
               </p>
               <p className="movie-genres">
-                <strong>Genres:</strong>{" "}
-                {show.genre_ids.map((id) => genres[id]).join(", ") || "N/A"}
+                <strong>Genres:</strong>
+                {show.genre_ids.map((id) =>
+                  genres[id] ? (
+                    <button key={id} className="genre-btn">
+                      {genres[id]}
+                    </button>
+                  ) : null
+                )}
               </p>
               <p className="movie-overview">
                 {show.overview.length > 100
