@@ -59,7 +59,6 @@ const TopRatedTV = () => {
       <div className="now-playing-container">
         <div className="play-he">
           <h2>Top Rated TV Shows</h2>
-          <img src={frame6} alt="Top Rated TV Shows" />
         </div>
         <div className="movies-carousel">
           {shows.slice(0, 5).map((show) => (

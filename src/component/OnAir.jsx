@@ -58,7 +58,6 @@ const OnAir = () => {
     <div className="now-playing-container">
       <div className="play-he">
         <h2>On Air Shows</h2>
-        <img src={frame6} alt="On Air Header" />
       </div>
       <div className="movies-carousel">
         {shows.slice(0, 5).map((show) => (

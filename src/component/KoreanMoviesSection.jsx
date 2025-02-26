@@ -61,7 +61,6 @@ const KoreanMoviesSection = () => {
       <div className="now-playing-container">
         <div className="play-he">
           <h2>Top Korean Movies</h2>
-          <img src={frame6} alt="Top Korean Movies Icon" />
         </div>
 
         <div className="movies-carousel">

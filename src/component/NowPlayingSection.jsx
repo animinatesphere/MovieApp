@@ -61,7 +61,6 @@ const NowPlayingSection = () => {
       <div className="now-playing-container">
         <div className="play-he">
           <h2>Now Playing</h2>
-          <img src={frame6} alt="" />
         </div>
         <div className="movies-carousel">
           {movies.slice(0, 5).map((movie) => (
