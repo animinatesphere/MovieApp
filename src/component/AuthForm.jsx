@@ -23,23 +23,23 @@ const AuthForm = () => {
             Sign Up
           </span>
         </div>
+        <div className="first-in">
+          <div className="input-group">
+            <label>Full Name</label>
+            <div className="input-field">
+              <FaUser className="icon" />
+              <input type="text" placeholder="Enter your full name" />
+            </div>
+          </div>
 
-        <div className="input-group">
-          <label>Full Name</label>
-          <div className="input-field">
-            <input type="text" placeholder="Enter your full name" />
-            <FaUser className="icon" />
+          <div className="input-group">
+            <label>Phone Number</label>
+            <div className="input-field">
+              <input type="text" placeholder="Enter your phone number" />
+              <FaPhone className="icon" />
+            </div>
           </div>
         </div>
-
-        <div className="input-group">
-          <label>Phone Number</label>
-          <div className="input-field">
-            <input type="text" placeholder="Enter your phone number" />
-            <FaPhone className="icon" />
-          </div>
-        </div>
-
         <div className="input-group">
           <label>Email</label>
           <div className="input-field">

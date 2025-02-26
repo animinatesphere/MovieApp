@@ -16,7 +16,8 @@
   background-color: #5b0e1f;
   padding: 20px;
   border-radius: 10px;
-  width: 350px;
+  width: 579px;
+  height: 373px;
   color: white;
   display: flex;
   flex-direction: column;
@@ -58,20 +59,32 @@
   align-items: center;
   position: relative;
 }
-
+.first-in {
+  display: flex;
+  align-self: center;
+  width: 100%;
+  gap: 1rem;
+}
 .input-field input {
   width: 100%;
   padding: 10px;
   padding-right: 35px;
+  padding-left: 3rem;
   border: none;
   border-radius: 5px;
   outline: none;
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+  border: 1px white solid;
 }
 
 .input-field .icon {
   position: absolute;
-  right: 10px;
-  color: gray;
+  width: 20px;
+  height: 20px;
+  left: 5px;
+  /* right: 10px; */
+  /* color: gray; */
 }
 
 .submit-btn {
@@ -97,11 +110,14 @@
   justify-content: center;
   width: 100%;
   padding: 10px;
-  background-color: white;
-  color: black;
-  border: none;
+  background-color: transparent;
+  color: rgb(255, 255, 255);
+  border: 1px white solid;
+  /* border: none; */
   border-radius: 5px;
   cursor: pointer;
+  font-size: 16px;
+  gap: 5px;
 }
 
 .google-icon {
