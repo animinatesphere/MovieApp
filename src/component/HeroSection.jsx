@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../css-component/hero-section.css";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa"; // Import icons
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const API_KEY = import.meta.env.VITE_App_Base_Api_key;
 const API_URL = import.meta.env.VITE_App_Base_Url;
@@ -23,7 +23,7 @@ const HeroSection = () => {
             },
           }
         );
-        setMovies(res.data.results.slice(0, 6));
+        setMovies(res.data.results.slice(0, 6)); // Fetch only 6 movies
       } catch (error) {
         console.error("Error fetching movies:", error);
       }
@@ -70,12 +70,28 @@ const HeroSection = () => {
         <h1 className="current-title">{currentMovie.title}</h1>
         <p className="movie-overview">
           {currentMovie.overview
-            ? currentMovie.overview.substring(0, 150)
+            ? currentMovie.overview
             : "No description available"}
           ...
         </p>
+
+        {/* Genre Buttons */}
+        <div className="genres">
+          {currentMovie.genre_ids?.length > 0 ? (
+            <div className="gens-bus">
+              {currentMovie.genre_ids.map((genreId) => (
+                <button key={genreId} className="genresutton">
+                  {getGenreName(genreId)}
+                </button>
+              ))}
+            </div>
+          ) : (
+            <p>No genres available</p>
+          )}
+        </div>
+
         <Link to={`/movie/${currentMovie.id}`}>
-          <button className="watch-button">Watch Now</button>
+          <button className="watch-button">View and Download</button>
         </Link>
       </div>
 
@@ -99,6 +115,32 @@ const HeroSection = () => {
       </div>
     </div>
   );
+};
+
+// Helper function to get genre names
+const getGenreName = (id) => {
+  const genres = {
+    28: "Action",
+    12: "Adventure",
+    16: "Animation",
+    35: "Comedy",
+    80: "Crime",
+    99: "Documentary",
+    18: "Drama",
+    10751: "Family",
+    14: "Fantasy",
+    36: "History",
+    27: "Horror",
+    10402: "Music",
+    9648: "Mystery",
+    10749: "Romance",
+    878: "Sci-Fi",
+    10770: "TV Movie",
+    53: "Thriller",
+    10752: "War",
+    37: "Western",
+  };
+  return genres[id] || "Unknown";
 };
 
 export default HeroSection;

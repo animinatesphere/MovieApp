@@ -42,6 +42,30 @@
   cursor: pointer;
   transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
+.gens-bus {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%; /* Ensure it takes up space */
+  min-height: 50px; /* Prevent 0 height */
+  margin-top: 1rem;
+}
+
+.gens-bus button {
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 2px solid yellow;
+  background: #ff03;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: 0.3s ease-in-out;
+  margin-bottom: 2rem;
+  white-space: nowrap;
+}
 
 /* Active Dot */
 .dot.active {
@@ -60,15 +84,15 @@
 .hero-overlay {
   position: absolute;
   bottom: 20%;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0%;
+  /* transform: translateX(-50%); */
   color: white;
-  background: rgba(0, 0, 0, 0.6);
+  /* background: rgba(0, 0, 0, 0.6); */
   padding: 20px;
   border-radius: 8px;
   width: 80%;
   max-width: 600px;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .current-title {
@@ -259,6 +283,15 @@
     right: 2%;
   }
 }
+@media screen and (max-width: 420px) {
+  .gen-bus {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative; /* Change from absolute */
+  }
+}
+
 /* Responsive Design for 414px */
 @media (max-width: 415px) {
   .current-title {
