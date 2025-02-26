@@ -8,6 +8,7 @@ import AiringTodayView from "./component/AiringTodayView";
 import AiringDetails from "./component/AiringDetails";
 import TopRatedMore from "./component/TopRatedMore";
 import TVShowDetails from "./component/TVShowDetails";
+import KoreanMoviesMore from "./component/KoreanMoviesMore";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/Top-rated" element={<TopReatedSection />} />
         <Route path="/airing-today" element={<AiringTodayView />} />
         <Route path="/top-rated-tv" element={<TopRatedMore />} />
+        <Route path="/korean-movies" element={<KoreanMoviesMore />} />
         <Route path="/tv/:id" element={<TVShowDetails />} />
         <Route path="/movie/:id" element={<MovieDetailsPage />} />
         <Route path="/tv/:id" element={<AiringDetails />} />

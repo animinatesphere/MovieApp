@@ -10,6 +10,7 @@ import RealFooter from "../component/RealFooter";
 import "../css-component/homepage.css";
 import TopRatedTV from "../component/TopRatedTV";
 import AuthForm from "../component/AuthForm";
+import KoreanMoviesSection from "../component/KoreanMoviesSection";
 
 const HomePage = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -40,7 +41,7 @@ const HomePage = () => {
       <TopRatedMovies />
       <HeroSection />
       <TopRatedTV />
-      {/* <AiringToday /> */}
+      <KoreanMoviesSection />
       <OnAir />
       <AuthForm />
       <RealFooter />
