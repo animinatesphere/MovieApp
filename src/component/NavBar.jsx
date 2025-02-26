@@ -12,7 +12,10 @@ const NavBar = () => {
     <nav className="navbar">
       {/* Logo Section */}
       <div className="logo-container">
-        <img src={logo} alt="Logo" className="logo" />
+        <a href="/">
+          {" "}
+          <img src={logo} alt="Logo" className="logo" />
+        </a>
         <img src={line} alt="" className="line" />
         <span className="brand-name">Hex sean</span>
       </div>
