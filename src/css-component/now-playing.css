@@ -603,7 +603,16 @@
 
 @media (max-width: 719px) {
   .movie-card {
-    max-width: 200px;
+    max-width: 220px;
+  }
+  .movies-carousel {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    gap: 7px;
+    justify-content: center;
+    overflow: hidden;
+    width: fit-content;
+    margin: 0 auto;
   }
   .play-he {
     display: flex;
@@ -693,7 +702,7 @@
 }
 @media screen and (max-width: 564px) {
   .movie-card {
-    max-width: 250px;
+    max-width: 200px;
   }
   .movies-carousel {
     display: grid;
@@ -752,7 +761,7 @@
 }
 @media (max-width: 467px) {
   .movie-card {
-    max-width: 350px;
+    max-width: 200px;
   }
   .play-he {
     display: flex;
@@ -783,16 +792,43 @@
     overflow-x: hidden;
   }
   .movies-carousel {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    gap: 7px;
+    justify-content: center;
+    overflow: hidden;
     width: fit-content;
     margin: 0 auto;
-    overflow-y: hidden;
-    margin-top: 2rem;
   }
 }
-
+@media screen and (max-width: 416px) {
+  .hero-overlay {
+    position: absolute;
+    bottom: 20%;
+    left: 5%;
+    /* transform: translateX(-50%); */
+    color: white;
+    /* background: rgba(0, 0, 0, 0.6); */
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    /* text-align: center; */
+  }
+}
 @media (max-width: 419px) {
   .movie-card {
     max-width: 300px;
+  }
+  .movies-carousel {
+    display: flex;
+    /* grid-template-columns: repeat(1, 1fr); */
+    flex-direction: column;
+    gap: 7px;
+    justify-content: center;
+    overflow: hidden;
+    width: fit-content;
+    margin: 0 auto;
   }
   .play-he {
     display: flex;
@@ -845,8 +881,11 @@
     width: fit-content;
     margin: 0 auto;
   }
+  .gens-bus {
+    display: flex;
+  }
   .hero-overlay button {
-    display: none;
+    display: flex;
   }
   .over {
     font-family: Vazirmatn;
@@ -876,7 +915,7 @@
     display: none;
   }
   .hero-overlay {
-    margin-left: -5rem;
+    /* margin-left: -5rem; */
     bottom: 150px;
   }
   .hero-container {
@@ -906,7 +945,13 @@
     background: #2f2f2f;
   }
   .movies-carousel {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 7px;
+    justify-content: center;
+    overflow: hidden;
     width: fit-content;
+    margin: 0 auto;
   }
   .current-title {
     font-family: Vazirmatn;
@@ -918,7 +963,7 @@
     margin: 0 auto;
   }
   .hero-overlay button {
-    display: none;
+    display: flex;
   }
   .over {
     font-family: Vazirmatn;
@@ -936,6 +981,15 @@
 @media (max-width: 391px) {
   .movie-card {
     width: 300px;
+  }
+  .movies-carousel {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 7px;
+    justify-content: center;
+    overflow: hidden;
+    width: fit-content;
+    margin: 0 auto;
   }
   .play-he {
     display: flex;
@@ -972,21 +1026,26 @@
     font-family: Vazirmatn;
     font-weight: 800;
     font-size: 30px;
-    line-height: 62.5px;
+    line-height: 50.5px;
     letter-spacing: 0%;
     width: fit-content;
     margin: 0 auto;
   }
   .hero-section {
-    height: 500px;
+    height: 650px;
   }
   .hero-overlay {
-    /* margin-left: -4rem; */
-    /* width: fit-content; */
-    /* margin: 0 auto; */
-    margin-top: 650px;
-    /* padding-top: 150rem; */
-    overflow-x: hidden;
+    position: absolute;
+    bottom: 10%;
+    left: 4%;
+    /* transform: translateX(-50%); */
+    color: white;
+    /* background: rgba(0, 0, 0, 0.6); */
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    /* text-align: center; */
   }
   .over {
     font-family: Vazirmatn;
@@ -1002,26 +1061,29 @@
     /* margin: 0 auto; */
     margin-left: 1rem;
   }
-  .hero-overlay button {
-    display: none;
-    width: 280px;
-    height: 40px;
-    border-radius: 4px;
-    padding-top: 8px;
-    padding-right: 24px;
-    padding-bottom: 8px;
-    padding-left: 10px;
-    gap: 20px;
-    background: #df2144;
-    font-family: Vazirmatn;
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 25px;
-    letter-spacing: 0%;
-    text-align: center;
-    color: #ffffff;
-    border: none;
-    margin-left: 2rem;
+
+  .gens-bus {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    min-height: 50px;
+    margin-top: 1rem;
+  }
+  .gens-bus button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 2px solid yellow;
+    background: #ff03;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.3sease-in-out;
+    margin-bottom: 2rem;
+    white-space: nowrap;
   }
   .hero-overlay img {
     margin-left: 1rem;
@@ -1041,65 +1103,7 @@
     margin-top: 200rem;
   }
 }
-@media screen and (max-width: 564px) {
-  .movie-card {
-    max-width: 300px;
-  }
-  .movies-carousel {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 5px;
-    justify-content: center;
-    overflow: hidden;
-    /* width: fit-content; */
-  }
-  .play-he {
-    display: flex;
-    align-items: center;
-    width: fit-content;
-    margin: 0 auto;
-    gap: 40rem;
-  }
-  .play-he h2 {
-    font-family: Vazirmatn;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 37.5px;
-    letter-spacing: 0%;
-    text-align: center;
-    color: #ffffff;
-  }
-  .play-he2 h2 {
-    font-family: Vazirmatn;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 37.5px;
-    letter-spacing: 0%;
-    /* text-align: right; */
-    color: #ffffff;
-    text-align: left;
-    padding-left: 100px;
-    padding-top: 5rem;
-  }
 
-  .frame-65 {
-    display: flex;
-    align-items: center;
-    width: fit-content;
-    margin: 0 auto;
-    /* position: absolute; */
-    margin-top: -0.7rem;
-    width: 200px;
-    height: 28px;
-    justify-content: space-between;
-    border-radius: 8px;
-    padding-top: 4px;
-    padding-right: 24px;
-    padding-bottom: 4px;
-    padding-left: 24px;
-    background: #2f2f2f;
-  }
-}
 @media (max-width: 382px) {
   .movie-card {
     max-width: 300px;
@@ -1134,6 +1138,15 @@
   .movies-carousel {
     width: fit-content;
   }
+  .movies-carousel {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 7px;
+    justify-content: center;
+    overflow: hidden;
+    width: fit-content;
+    margin: 0 auto;
+  }
   .current-title {
     font-family: Vazirmatn;
     font-weight: 800;
@@ -1144,7 +1157,7 @@
     margin: 0 auto;
   }
   .hero-overlay button {
-    display: none;
+    display: flex;
   }
   .over {
     font-family: Vazirmatn;
@@ -1205,7 +1218,7 @@
     margin: 0 auto;
   }
   .hero-overlay button {
-    display: none;
+    display: flex;
   }
   .over {
     font-family: Vazirmatn;
@@ -1256,10 +1269,6 @@
     background: #2f2f2f;
   }
 
-  .hero-overlay {
-    margin-left: -4rem;
-  }
-
   .current-title {
     font-family: Vazirmatn;
     font-weight: 800;
@@ -1270,7 +1279,7 @@
     margin: 0 auto;
   }
   .hero-overlay button {
-    display: none;
+    display: flex;
   }
   .over {
     font-family: Vazirmatn;
